@@ -377,6 +377,10 @@ h1 {
   gap: 1rem;
 }
 
+.section-spacer {
+  margin-top: 1rem;
+}
+
 .tablist,
 .chips {
   display: flex;

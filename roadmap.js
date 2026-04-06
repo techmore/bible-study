@@ -243,6 +243,33 @@ const specializationCards = [
   },
 ];
 
+const unlocks = [
+  {
+    title: "Bible versions and translation families",
+    level: "After John",
+    copy: "After you can read John with confidence, start comparing readable and more literal translations and learn what each one is doing.",
+    chips: ["NIV", "ESV", "CSB", "NLT"],
+  },
+  {
+    title: "Christian traditions map",
+    level: "After the Gospels",
+    copy: "Once the basics are steady, compare Catholic, Orthodox, and Protestant Christianity so the family map makes sense.",
+    chips: ["Catholic", "Orthodox", "Protestant"],
+  },
+  {
+    title: "Canon and ordering",
+    level: "After overview",
+    copy: "Learn why John is first in the learning path even though it is not the Bible's first book, and how the canon was arranged.",
+    chips: ["Canon", "Order", "History"],
+  },
+  {
+    title: "Apologetics track",
+    level: "After foundations",
+    copy: "Use manuscript evidence, resurrection arguments, and worldview questions as a deeper addendum after the core path is familiar.",
+    chips: ["Evidence", "Arguments", "Reliability"],
+  },
+];
+
 const diveCards = [
   {
     title: "Shallow dives",
@@ -360,6 +387,7 @@ if (treeTarget) {
 }
 
 renderList("dive-grid", diveCards, renderDiveCard);
+renderList("unlock-grid", unlocks, renderCadenceCard);
 
 const toggleTarget = document.getElementById("specialization-toggle");
 const specializationGrid = document.getElementById("specialization-grid");
