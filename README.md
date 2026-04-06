@@ -2,6 +2,11 @@
 
 Static GitHub Pages site for a beginner-friendly, comprehensive guide to Jesus, Christianity, the Bible, historical context, listening paths, and supplemental resources.
 
+## Pages
+
+- `index.html` for the home hub and resource library
+- `roadmap.html` for the dedicated mastery tree and long-form learning path
+
 ## Local preview
 
 Open `index.html` directly or serve the folder with a simple static server:
