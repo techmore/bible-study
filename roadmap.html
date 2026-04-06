@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/@xyflow/react@12.10.1/dist/style.css" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -31,9 +32,9 @@
       </a>
       <nav class="topnav" aria-label="Primary">
         <a href="./index.html">Home</a>
-        <a href="#cadence">Cadence</a>
-        <a href="#tree">Skill Tree</a>
-        <a href="#specializations">Specializations</a>
+        <a href="#flow">Flow</a>
+        <a href="#progress-guide">Progress</a>
+        <a href="#mastery-model">Model</a>
       </nav>
     </header>
 
@@ -43,95 +44,85 @@
           <p class="eyebrow">Mastery roadmap</p>
           <h1>A four-year path with daily practice, weekly study, and real specialization.</h1>
           <p class="lede">
-            This page is designed like a skill tree. You can start shallow, deepen over time, and then
-            branch into disciplines like Gospel study, biblical theology, historical context, Greek, apologetics,
-            and teaching.
+            This page is now designed as an actual progression map. Nodes unlock only when their
+            prerequisites are complete, the connections explain why the order exists, and the side panel
+            tells you what each step prepares you to understand next.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#tree">Enter the tree</a>
-            <a class="button button-secondary" href="#specializations">Pick a specialization</a>
+            <a class="button button-primary" href="#flow">Enter the flow</a>
+            <a class="button button-secondary" href="#mastery-model">See the mastery model</a>
           </div>
         </div>
         <aside class="roadmap-panel">
           <p class="panel-kicker">Core idea</p>
           <p>
-            The goal is not just reading. It is moving toward mastery: knowing the story, the language,
-            the world, the doctrines, the arguments, and the habits well enough to teach, defend, and
-            live them.
+            The goal is not just reading. It is moving toward mastery: knowing why John is the entry
+            point, how that unlocks the rest of the Gospels, when canon and translations become
+            important, and how apologetics, traditions, context, and teaching fit together.
           </p>
         </aside>
       </section>
 
-      <section id="cadence" class="roadmap-section">
+      <section id="flow" class="roadmap-section">
         <div class="section-heading">
-          <p class="eyebrow">Cadence</p>
-          <h2>Daily, weekly, monthly, and yearly rhythm</h2>
+          <p class="eyebrow">Interactive flow</p>
+          <h2>A real unlock path with progress and dependencies</h2>
           <p class="section-subtitle">
-            A good roadmap should be livable. These rhythms make the path sustainable over years instead
-            of only interesting for a weekend.
+            Select a node to see why it exists, what it unlocks, and what cadence fits it. Mark a node
+            complete to unlock the next layer. Progress is stored locally in your browser.
           </p>
         </div>
-        <div class="cadence-grid" id="cadence-grid"></div>
+        <div id="roadmap-app"></div>
       </section>
 
-      <section class="roadmap-section">
+      <section id="progress-guide" class="roadmap-section">
         <div class="section-heading">
-          <p class="eyebrow">Four years</p>
-          <h2>From beginner to capable guide</h2>
+          <p class="eyebrow">Progress</p>
+          <h2>How to use the roadmap over years</h2>
           <p class="section-subtitle">
-            Each year opens a new layer: first Jesus, then the whole Bible, then the world behind the text,
-            then synthesis and specialization.
+            The flow is the map, but the cadence is what turns it into mastery. Use the lighter nodes
+            for momentum and the denser nodes for deeper seasons of study.
           </p>
         </div>
-        <div class="meta-grid" id="year-grid"></div>
+        <div class="roadmap-guide-grid">
+          <article class="card list-card">
+            <h3>Daily</h3>
+            <p>20 to 45 minutes. Read or listen, write one note, and finish one small action tied to the current unlocked node.</p>
+          </article>
+          <article class="card list-card">
+            <h3>Weekly</h3>
+            <p>2 to 4 hours. Complete one substantial study block, one review session, and one context or theology add-on.</p>
+          </article>
+          <article class="card list-card">
+            <h3>Quarterly</h3>
+            <p>Choose one branch to push deeper, then return to the main path so progress stays connected instead of fragmented.</p>
+          </article>
+        </div>
       </section>
 
-      <section id="tree" class="roadmap-section">
+      <section id="mastery-model" class="roadmap-section">
         <div class="section-heading">
-          <p class="eyebrow">Skill tree</p>
-          <h2>Branches you can level up in parallel</h2>
+          <p class="eyebrow">Mastery model</p>
+          <h2>What the branches are trying to build</h2>
           <p class="section-subtitle">
-            Think of this as a set of skill lines. You do not have to finish one before touching another,
-            but each line gets deeper and more demanding as you go.
+            The map starts with Jesus, then expands outward into canon, translation, traditions, context,
+            apologetics, and finally teaching and integration.
           </p>
         </div>
-        <div class="skill-tree" id="skill-tree"></div>
-      </section>
-
-      <section id="specializations" class="roadmap-section">
-        <div class="section-heading">
-          <p class="eyebrow">Specializations</p>
-          <h2>Choose a lane for deeper mastery</h2>
-          <p class="section-subtitle">
-            These are the equivalent of class specs: focused tracks for people who want to go beyond basic literacy and
-            become especially strong in one area.
-          </p>
+        <div class="roadmap-guide-grid">
+          <article class="card list-card">
+            <h3>Core path</h3>
+            <p>John, the Gospels, Acts, canon, translations, and the Bible’s overall storyline.</p>
+          </article>
+          <article class="card list-card">
+            <h3>Addendum unlocks</h3>
+            <p>Christian traditions, historical context, Greek and Latin tools, and apologetics open after the base story is stable.</p>
+          </article>
+          <article class="card list-card">
+            <h3>End state</h3>
+            <p>You can explain Jesus clearly, place books in the story, compare traditions and translations responsibly, and teach others.</p>
+          </article>
         </div>
-        <div class="specialization-toggle" id="specialization-toggle"></div>
-        <div class="specialization-grid" id="specialization-grid"></div>
-      </section>
-
-      <section class="roadmap-section">
-        <div class="section-heading">
-          <p class="eyebrow">Unlocks</p>
-          <h2>Addendum skills that open after the core path</h2>
-          <p class="section-subtitle">
-            These are the extra branches that should feel earned, not front-loaded. They are the follow-up layer
-            after the basic Gospel path is in place.
-          </p>
-        </div>
-        <div class="dive-grid" id="unlock-grid"></div>
-      </section>
-
-      <section class="roadmap-section">
-        <div class="section-heading">
-          <p class="eyebrow">Depth</p>
-          <h2>Shallow dives, deep dives, and mastery targets</h2>
-          <p class="section-subtitle">
-            Use shallow dives when you need momentum. Use deep dives when you want real command of the material.
-          </p>
-        </div>
-        <div class="dive-grid" id="dive-grid"></div>
       </section>
 
       <section class="section callout">
@@ -149,6 +140,18 @@
       </section>
     </main>
 
-    <script src="./roadmap.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.3.1",
+          "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+          "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+          "react-dom": "https://esm.sh/react-dom@18.3.1",
+          "@xyflow/react": "https://esm.sh/@xyflow/react@12.10.1?external=react,react-dom",
+          "htm": "https://esm.sh/htm@3.1.1"
+        }
+      }
+    </script>
+    <script type="module" src="./roadmap.js"></script>
   </body>
 </html>
