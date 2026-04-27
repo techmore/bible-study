@@ -98,6 +98,53 @@ Suggested path:
 
 Fasting and solitude are valuable, but they should probably come after the first two weeks. They can be intense or misunderstood by newcomers if introduced too early.
 
+## Days 15-28
+
+Days 15-28 should deepen the Gospel picture without turning the homepage into a full course.
+
+Suggested arc:
+
+| Days | Reading | Focus |
+| --- | --- | --- |
+| 15-21 | Luke | Jesus' compassion, prayer, parables, outsiders, the cross, and resurrection |
+| 22-28 | Mark and Matthew highlights | Jesus' authority, kingdom teaching, discipleship, and the Sermon on the Mount |
+
+The homepage should show this as a preview, not a full card grid. The full day-by-day version can live in a future path page.
+
+## 90-Day First Journey
+
+The 90-day path should be the fuller journey after the first week. It should be structured enough to guide, but not so dense that a beginner feels trapped.
+
+Suggested six-part arc:
+
+| Phase | Days | Focus | Aim |
+| --- | --- | --- | --- |
+| 1 | 1-7 | Meet Jesus in John | Start with Jesus, listen along, ask one question each day |
+| 2 | 8-14 | Begin the practices | Scripture, prayer, rest, community, generosity, service, witness |
+| 3 | 15-28 | Walk through Luke, Mark, and Matthew highlights | See Jesus from more than one Gospel witness |
+| 4 | 29-42 | Acts | Learn resurrection life, the Holy Spirit, church, mission, and early Christian community |
+| 5 | 43-63 | Romans and Ephesians | Learn grace, faith, sin, salvation, new life, the church, and formation |
+| 6 | 64-84 | Whole-Bible foundations | Creation, fall, covenant, Exodus, Psalms, Isaiah, promise, and Messiah |
+| 7 | 85-90 | Rule of life | Build a simple ongoing rhythm of Scripture, prayer, Sabbath, community, service, and witness |
+
+Homepage implementation:
+
+- Keep the full 90-day path as an overview only.
+- Add a compact "After Week One" section with three cards:
+  - Days 8-14: Begin the practices
+  - Days 15-28: Keep walking with Jesus
+  - 90 days: A fuller first journey
+- Move the full day-by-day 90-day version to a future dedicated page.
+
+Future dedicated path page:
+
+- Day-by-day reading cards
+- Persistent progress
+- Practice introductions
+- Lightbulb panels for confusing ideas
+- Optional deeper resources
+- Clear reset/export options
+
 ## Practices Library
 
 Create a later section called "Explore the Practices."
@@ -253,6 +300,8 @@ Avoid making the beginner feel they must buy something. Always offer free web al
 
 - [x] Generalize the current listening drawer into reusable drawer content.
 - [x] Support multiple trigger buttons with `data-drawer-open`.
+- [x] Add a compact "After Week One" homepage preview.
+- [x] Add a 90-day first journey outline to this plan.
 - [ ] Add panels for John, Gospel, translations, and prayer.
 - [x] Add the Sabbath/rest panel.
 
