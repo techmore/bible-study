@@ -279,6 +279,66 @@ const resources = [
   },
 ];
 
+const firstSevenDays = [
+  {
+    day: 1,
+    reading: "John 1",
+    focus: "Jesus as the Word, light, and Son of God.",
+    question: "Who does John say Jesus is?",
+    readHref: "https://www.biblegateway.com/passage/?search=John+1&version=NIV",
+    listenHref: "https://www.biblegateway.com/audio/purevoice/niv/John.1",
+  },
+  {
+    day: 2,
+    reading: "John 2-3",
+    focus: "Signs, new birth, belief, and God's love for the world.",
+    question: "What does Jesus say a person needs?",
+    readHref: "https://www.biblegateway.com/passage/?search=John+2-3&version=NIV",
+    listenHref: "https://www.biblegateway.com/audio/purevoice/niv/John.2",
+  },
+  {
+    day: 3,
+    reading: "John 4",
+    focus: "Jesus meets outsiders and offers living water.",
+    question: "Who does Jesus welcome?",
+    readHref: "https://www.biblegateway.com/passage/?search=John+4&version=NIV",
+    listenHref: "https://www.biblegateway.com/audio/purevoice/niv/John.4",
+  },
+  {
+    day: 4,
+    reading: "John 5-6",
+    focus: "Authority, signs, hunger, and the bread of life.",
+    question: "What are people looking for from Jesus?",
+    readHref: "https://www.biblegateway.com/passage/?search=John+5-6&version=NIV",
+    listenHref: "https://www.biblegateway.com/audio/purevoice/niv/John.5",
+  },
+  {
+    day: 5,
+    reading: "John 7-10",
+    focus: "Conflict, identity, light, truth, and the good shepherd.",
+    question: "Why do people divide over Jesus?",
+    readHref: "https://www.biblegateway.com/passage/?search=John+7-10&version=NIV",
+    listenHref: "https://www.biblegateway.com/audio/purevoice/niv/John.7",
+  },
+  {
+    day: 6,
+    reading: "John 11-17",
+    focus: "Resurrection, love, service, prayer, and final teaching.",
+    question: "What does Jesus promise his followers?",
+    readHref: "https://www.biblegateway.com/passage/?search=John+11-17&version=NIV",
+    listenHref: "https://www.biblegateway.com/audio/purevoice/niv/John.11",
+  },
+  {
+    day: 7,
+    reading: "John 18-21",
+    focus: "The cross, resurrection, restoration, and a moment to rest.",
+    question: "What does Jesus accomplish?",
+    readHref: "https://www.biblegateway.com/passage/?search=John+18-21&version=NIV",
+    listenHref: "https://www.biblegateway.com/audio/purevoice/niv/John.18",
+    note: "After seven days, pause. Rest is part of the path, not a failure to study.",
+  },
+];
+
 function amazonSearch(query) {
   return `https://www.amazon.com/s?k=${encodeURIComponent(query)}`;
 }
@@ -324,6 +384,78 @@ function renderSection(id, items) {
   const target = document.getElementById(id);
   if (!target) return;
   target.innerHTML = items.map(resourceCard).join("");
+}
+
+function firstDayCard(item, completedDays) {
+  const id = `first-day-${item.day}`;
+  const checked = completedDays.has(String(item.day)) ? "checked" : "";
+  const noteMarkup = item.note ? `<p class="path-note">${escapeHtml(item.note)}</p>` : "";
+
+  return `
+    <article class="card path-card ${checked ? "is-complete" : ""}" data-path-day="${item.day}">
+      <div class="path-card-head">
+        <span class="badge">${item.day}</span>
+        <label class="path-check" for="${id}">
+          <input id="${id}" type="checkbox" data-path-check="${item.day}" ${checked} />
+          <span>Done</span>
+        </label>
+      </div>
+      <h3>Day ${item.day}: ${escapeHtml(item.reading)}</h3>
+      <p>${escapeHtml(item.focus)}</p>
+      <div class="path-question">
+        <span>Ask</span>
+        <strong>${escapeHtml(item.question)}</strong>
+      </div>
+      ${noteMarkup}
+      <div class="resource-links">
+        <a class="link" href="${escapeHtml(item.readHref)}" target="_blank" rel="noopener noreferrer">Read</a>
+        <a class="link" href="${escapeHtml(item.listenHref)}" target="_blank" rel="noopener noreferrer">Listen</a>
+      </div>
+    </article>
+  `;
+}
+
+function setupFirstPath() {
+  const grid = document.getElementById("first-days-grid");
+  const progress = document.getElementById("path-progress-count");
+  const reset = document.getElementById("path-reset");
+  const storageKey = "the-way-first-seven-days";
+
+  if (!grid) return;
+
+  const load = () => {
+    try {
+      return new Set(JSON.parse(localStorage.getItem(storageKey) || "[]"));
+    } catch {
+      return new Set();
+    }
+  };
+
+  const save = (completedDays) => {
+    localStorage.setItem(storageKey, JSON.stringify([...completedDays]));
+  };
+
+  const render = () => {
+    const completedDays = load();
+    grid.innerHTML = firstSevenDays.map((item) => firstDayCard(item, completedDays)).join("");
+    if (progress) progress.textContent = `${completedDays.size} of ${firstSevenDays.length} days`;
+
+    grid.querySelectorAll("[data-path-check]").forEach((input) => {
+      input.addEventListener("change", () => {
+        const next = load();
+        input.checked ? next.add(input.dataset.pathCheck) : next.delete(input.dataset.pathCheck);
+        save(next);
+        render();
+      });
+    });
+  };
+
+  reset?.addEventListener("click", () => {
+    localStorage.removeItem(storageKey);
+    render();
+  });
+
+  render();
 }
 
 function setupTabs() {
@@ -427,3 +559,4 @@ if (resourceGrid) {
 setupTabs();
 setupFilters();
 setupResourceDrawer();
+setupFirstPath();
