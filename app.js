@@ -341,6 +341,46 @@ const firstSevenDays = [
 ];
 
 const drawerTopics = {
+  john: {
+    kicker: "Why John?",
+    title: "Start with the clearest doorway to Jesus.",
+    body: `
+      <p class="drawer-intro">
+        John is not first because the other Gospels matter less. John is first because it gives a direct,
+        concentrated introduction to who Jesus is and what belief in him means.
+      </p>
+
+      <div class="drawer-section">
+        <h3>What John helps you see</h3>
+        <article class="drawer-resource">
+          <span class="pill">Start here</span>
+          <h4>Jesus is more than a teacher</h4>
+          <p>
+            John opens by calling Jesus the Word, the light, the Son, and the one who makes God known.
+            That gives a beginner the main question early: who is Jesus?
+          </p>
+        </article>
+        <article class="drawer-resource">
+          <span class="pill">Then widen</span>
+          <h4>The other Gospels round out the picture</h4>
+          <p>
+            Luke gives a broad ordered account, Mark moves quickly through Jesus' authority and suffering,
+            and Matthew highlights kingdom, fulfillment, and discipleship.
+          </p>
+        </article>
+      </div>
+
+      <div class="drawer-section drawer-note">
+        <h3>Simple first move</h3>
+        <ol class="steps">
+          <li>Read John 1 slowly.</li>
+          <li>Ask, "Who does John say Jesus is?"</li>
+          <li>Do not worry about every unfamiliar word yet.</li>
+          <li>Let the whole Gospel answer the first question.</li>
+        </ol>
+      </div>
+    `,
+  },
   listening: {
     kicker: "Listening Resources",
     title: "Read John with audio beside you.",
@@ -404,6 +444,95 @@ const drawerTopics = {
           <li>Listen to one chapter while following the words.</li>
           <li>Replay confusing sections before adding commentary.</li>
         </ol>
+      </div>
+    `,
+  },
+  translations: {
+    kicker: "Translations",
+    title: "Use clarity first, precision second.",
+    body: `
+      <p class="drawer-intro">
+        A Bible translation is not a spiritual ranking system. For a beginner, the best translation is
+        one you can actually read with understanding.
+      </p>
+
+      <div class="drawer-section">
+        <h3>Simple recommendation</h3>
+        <article class="drawer-resource">
+          <span class="pill">First read</span>
+          <h4>NIV or NLT</h4>
+          <p>
+            Use NIV or NLT when you want the story to make sense in clear modern English. This is especially
+            helpful when reading John for the first time.
+          </p>
+        </article>
+        <article class="drawer-resource">
+          <span class="pill">Compare</span>
+          <h4>ESV, CSB, NASB, or NKJV</h4>
+          <p>
+            Check a more literal or middle-ground translation when a verse feels important, dense, or
+            confusing. Differences often show where the original wording carries nuance.
+          </p>
+        </article>
+        <article class="drawer-resource">
+          <span class="pill">Later</span>
+          <h4>Interlinear tools</h4>
+          <p>
+            BibleHub and interlinear tools are useful later, but they can overload a beginner. Use them
+            when you have a specific word or verse you want to inspect.
+          </p>
+        </article>
+      </div>
+
+      <div class="drawer-section">
+        <h3>Try John 1 side by side</h3>
+        <div class="resource-links">
+          <a class="link" href="https://www.biblegateway.com/passage/?search=John+1&version=NIV,NLT,ESV,CSB" target="_blank" rel="noopener noreferrer">Compare John 1</a>
+          <a class="link" href="https://biblehub.com/interlinear/john/1.htm" target="_blank" rel="noopener noreferrer">John 1 interlinear</a>
+        </div>
+      </div>
+    `,
+  },
+  gospel: {
+    kicker: "The Gospel",
+    title: "The good news centers on Jesus.",
+    body: `
+      <p class="drawer-intro">
+        The word Gospel means good news. In Christianity, the good news is not mainly advice or self-improvement.
+        It is the announcement of what God has done through Jesus.
+      </p>
+
+      <div class="drawer-section">
+        <h3>Plain-language shape</h3>
+        <article class="drawer-resource">
+          <span class="pill">Jesus</span>
+          <h4>God comes near</h4>
+          <p>
+            The New Testament presents Jesus as God's Son, the Messiah, the crucified and risen Lord, and
+            the one who reveals God clearly.
+          </p>
+        </article>
+        <article class="drawer-resource">
+          <span class="pill">Cross</span>
+          <h4>Forgiveness and rescue</h4>
+          <p>
+            Christians believe Jesus gives himself for sinners, deals with evil and death, and opens the
+            way for forgiveness, reconciliation with God, and new life.
+          </p>
+        </article>
+        <article class="drawer-resource">
+          <span class="pill">Response</span>
+          <h4>Trust and follow</h4>
+          <p>
+            Faith means more than agreeing with facts. It means trusting Jesus, turning toward him, and
+            learning to live as his disciple.
+          </p>
+        </article>
+      </div>
+
+      <div class="drawer-section drawer-note">
+        <h3>Hold this question</h3>
+        <p>As you read John, keep asking: what does Jesus offer, and what does he ask people to trust?</p>
       </div>
     `,
   },
@@ -559,6 +688,12 @@ function lightbulbIcon() {
       <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
     </svg>
   `;
+}
+
+function setupStaticLightbulbs() {
+  document.querySelectorAll(".text-lightbulb").forEach((target) => {
+    target.outerHTML = lightbulbIcon();
+  });
 }
 
 function setupFirstPath() {
@@ -728,4 +863,5 @@ if (resourceGrid) {
 setupTabs();
 setupFilters();
 setupFirstPath();
+setupStaticLightbulbs();
 setupGuideDrawer();

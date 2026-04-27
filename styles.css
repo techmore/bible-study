@@ -431,6 +431,12 @@ h1 {
   color: currentColor;
 }
 
+.text-lightbulb {
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1;
+}
+
 .resource-panel-trigger:hover {
   background: rgba(143, 95, 45, 0.1);
   box-shadow: none;

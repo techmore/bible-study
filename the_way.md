@@ -302,7 +302,8 @@ Avoid making the beginner feel they must buy something. Always offer free web al
 - [x] Support multiple trigger buttons with `data-drawer-open`.
 - [x] Add a compact "After Week One" homepage preview.
 - [x] Add a 90-day first journey outline to this plan.
-- [ ] Add panels for John, Gospel, translations, and prayer.
+- [x] Add panels for John, Gospel, and translations.
+- [ ] Add a prayer panel.
 - [x] Add the Sabbath/rest panel.
 
 ### Phase 3: Glossary
