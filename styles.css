@@ -405,10 +405,18 @@ h1 {
   position: absolute;
   top: 1.2rem;
   right: 1.2rem;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
 }
 
 .resource-panel-icon {
   color: currentColor;
+}
+
+.resource-panel-trigger:hover {
+  background: rgba(143, 95, 45, 0.1);
+  box-shadow: none;
 }
 
 .timeline {
