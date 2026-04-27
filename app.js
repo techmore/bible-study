@@ -536,6 +536,55 @@ const drawerTopics = {
       </div>
     `,
   },
+  prayer: {
+    kicker: "Prayer",
+    title: "Start with honest words to God.",
+    body: `
+      <p class="drawer-intro">
+        Prayer is not a performance. For a beginner, prayer can start as honest attention to God:
+        gratitude, confession, asking for help, and quiet trust.
+      </p>
+
+      <div class="drawer-section">
+        <h3>A simple pattern</h3>
+        <article class="drawer-resource">
+          <span class="pill">Beginner</span>
+          <h4>Four honest movements</h4>
+          <p>
+            Thank God for one thing. Tell the truth about one thing. Ask for help with one thing.
+            Sit quietly for one minute before you move on.
+          </p>
+        </article>
+        <article class="drawer-resource">
+          <span class="pill">Jesus</span>
+          <h4>Use the Lord's Prayer</h4>
+          <p>
+            Jesus gave his disciples a prayer that begins with God as Father, asks for his kingdom,
+            daily provision, forgiveness, and deliverance from evil.
+          </p>
+        </article>
+      </div>
+
+      <div class="drawer-section drawer-note">
+        <h3>Try this today</h3>
+        <ol class="steps">
+          <li>Read Matthew 6:9-13 slowly.</li>
+          <li>Pray one line in your own words.</li>
+          <li>Ask Jesus to teach you how to follow him.</li>
+          <li>Keep it short enough that you will come back tomorrow.</li>
+        </ol>
+      </div>
+
+      <div class="drawer-section">
+        <h3>Read nearby</h3>
+        <div class="resource-links">
+          <a class="link" href="https://www.biblegateway.com/passage/?search=Matthew+6%3A9-13&version=NIV" target="_blank" rel="noopener noreferrer">Matthew 6:9-13</a>
+          <a class="link" href="https://www.biblegateway.com/passage/?search=Psalm+23&version=NIV" target="_blank" rel="noopener noreferrer">Psalm 23</a>
+          <a class="link" href="https://www.biblegateway.com/passage/?search=John+17&version=NIV" target="_blank" rel="noopener noreferrer">John 17</a>
+        </div>
+      </div>
+    `,
+  },
   sabbath: {
     kicker: "Rest",
     title: "After seven days, pause.",

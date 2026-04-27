@@ -303,7 +303,7 @@ Avoid making the beginner feel they must buy something. Always offer free web al
 - [x] Add a compact "After Week One" homepage preview.
 - [x] Add a 90-day first journey outline to this plan.
 - [x] Add panels for John, Gospel, and translations.
-- [ ] Add a prayer panel.
+- [x] Add a prayer panel.
 - [x] Add the Sabbath/rest panel.
 
 ### Phase 3: Glossary

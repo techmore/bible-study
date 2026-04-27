@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260426-5" />
+    <link rel="stylesheet" href="./styles.css?v=20260426-6" />
   </head>
   <body>
     <div class="backdrop backdrop-a"></div>
@@ -200,8 +200,20 @@
           </p>
         </div>
         <div class="next-path-grid">
-          <article class="card next-path-card">
-            <span class="track-pill">Days 8-14</span>
+          <article class="card next-path-card card-with-action">
+            <div class="card-topline">
+              <span class="track-pill">Days 8-14</span>
+              <button
+                class="icon-button resource-panel-trigger"
+                type="button"
+                aria-label="Open prayer guide"
+                aria-controls="guide-drawer"
+                aria-expanded="false"
+                data-drawer-open="prayer"
+              >
+                <span class="text-lightbulb" aria-hidden="true">?</span>
+              </button>
+            </div>
             <h3>Begin the practices</h3>
             <p>Scripture, prayer, rest, community, generosity, service, and witness. One practice at a time.</p>
           </article>
@@ -499,6 +511,6 @@
       <div id="guide-drawer-body"></div>
     </aside>
 
-    <script src="./app.js?v=20260426-5"></script>
+    <script src="./app.js?v=20260426-6"></script>
   </body>
 </html>
