@@ -244,34 +244,35 @@ Avoid making the beginner feel they must buy something. Always offer free web al
 
 ### Phase 1: First 7 Days
 
-- Add a "First 7 Days With John" section to `index.html`.
-- Add day cards with reading, listening, reflection question, and checkbox.
-- Use `localStorage` to persist completion.
-- Add one lightbulb panel for Day 7 rest/Sabbath.
+- [x] Add a "First 7 Days With John" section to `index.html`.
+- [x] Add day cards with reading, listening, reflection question, and checkbox.
+- [x] Use `localStorage` to persist completion.
+- [x] Add one lightbulb panel for Day 7 rest/Sabbath.
 
 ### Phase 2: Lightbulb System
 
-- Generalize the current listening drawer into reusable drawer content.
-- Support multiple trigger buttons with `data-drawer-topic`.
-- Add panels for John, Gospel, translations, prayer, and Sabbath.
+- [x] Generalize the current listening drawer into reusable drawer content.
+- [x] Support multiple trigger buttons with `data-drawer-open`.
+- [ ] Add panels for John, Gospel, translations, and prayer.
+- [x] Add the Sabbath/rest panel.
 
 ### Phase 3: Glossary
 
-- Add a glossary data object in `app.js`.
-- Render glossary cards or a searchable glossary section.
-- Link glossary terms from lightbulb panels.
+- [ ] Add a glossary data object in `app.js`.
+- [ ] Render glossary cards or a searchable glossary section.
+- [ ] Link glossary terms from lightbulb panels.
 
 ### Phase 4: Practices
 
-- Add "Explore the Practices" after the 14-day path or near the resource library.
-- Keep each practice card short.
-- Use the drawer for beginner steps and passages.
+- [ ] Add "Explore the Practices" after the 14-day path or near the resource library.
+- [ ] Keep each practice card short.
+- [ ] Use the drawer for beginner steps and passages.
 
 ### Phase 5: Resource Library Cleanup
 
-- Add labels for Start Today, Beginner Friendly, and Later.
-- Move advanced tools lower.
-- Add study Bible guidance without making purchases feel required.
+- [ ] Add labels for Start Today, Beginner Friendly, and Later.
+- [ ] Move advanced tools lower.
+- [ ] Add study Bible guidance without making purchases feel required.
 
 ## North Star
 

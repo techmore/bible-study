@@ -499,6 +499,12 @@ h1 {
   align-items: center;
 }
 
+.path-card-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
 .path-card-head .badge {
   margin-bottom: 0;
 }
@@ -521,6 +527,19 @@ h1 {
   width: 1.05rem;
   height: 1.05rem;
   accent-color: var(--accent);
+}
+
+.path-lightbulb {
+  width: 2rem;
+  height: 2rem;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.path-lightbulb:hover {
+  background: rgba(143, 95, 45, 0.1);
+  box-shadow: none;
 }
 
 .path-question {

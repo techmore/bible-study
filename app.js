@@ -336,8 +336,120 @@ const firstSevenDays = [
     readHref: "https://www.biblegateway.com/passage/?search=John+18-21&version=NIV",
     listenHref: "https://www.biblegateway.com/audio/purevoice/niv/John.18",
     note: "After seven days, pause. Rest is part of the path, not a failure to study.",
+    drawerTopic: "sabbath",
   },
 ];
+
+const drawerTopics = {
+  listening: {
+    kicker: "Listening Resources",
+    title: "Read John with audio beside you.",
+    body: `
+      <p class="drawer-intro">
+        Start with a modern translation and a clean narrator. If one site feels awkward on your phone,
+        use the next one; the goal is steady exposure to the Gospel itself.
+      </p>
+
+      <div class="drawer-section">
+        <h3>Best first choice</h3>
+        <article class="drawer-resource">
+          <span class="pill">Beginner</span>
+          <h4>BibleGateway Audio Bibles</h4>
+          <p>
+            Best overall starting point: open John, choose NIV, NLT, or another readable translation,
+            then use the speaker icon or Audio Bibles page to listen while the text stays nearby.
+          </p>
+          <div class="resource-links">
+            <a class="link" href="https://www.biblegateway.com/passage/?search=John+1&version=NIV" target="_blank" rel="noopener noreferrer">John 1 NIV</a>
+            <a class="link" href="https://www.biblegateway.com/resources/audio/" target="_blank" rel="noopener noreferrer">Audio Bibles</a>
+            <a class="link" href="https://www.biblegateway.com/audio/devotional/story-of-jesus" target="_blank" rel="noopener noreferrer">Story of Jesus</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="drawer-section">
+        <h3>Good browser backups</h3>
+        <article class="drawer-resource">
+          <span class="pill">KJV</span>
+          <h4>AudioBible.com</h4>
+          <p>Simple chapter links with KJV text and audio together. Useful if you want word-for-word read-along in a traditional translation.</p>
+          <div class="resource-links">
+            <a class="link" href="https://audiobible.com/bible/bible.html" target="_blank" rel="noopener noreferrer">Open AudioBible</a>
+          </div>
+        </article>
+        <article class="drawer-resource">
+          <span class="pill">Languages</span>
+          <h4>WordProject</h4>
+          <p>No-frills chapter pages with text and audio, especially helpful when English is not the only language you want available.</p>
+          <div class="resource-links">
+            <a class="link" href="https://www.wordproject.org/bibles/audio/01_english/b43.htm" target="_blank" rel="noopener noreferrer">John Audio</a>
+            <a class="link" href="https://wordproject.org/bibles/audio/index.htm" target="_blank" rel="noopener noreferrer">Audio Index</a>
+          </div>
+        </article>
+        <article class="drawer-resource">
+          <span class="pill">NET</span>
+          <h4>Bible.org John Audio</h4>
+          <p>A focused Gospel of John audio page using the NET Bible ecosystem. Good as another browser-based option.</p>
+          <div class="resource-links">
+            <a class="link" href="https://bible.org/john_audio" target="_blank" rel="noopener noreferrer">John MP3 Audio</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="drawer-section drawer-note">
+        <h3>Simple rhythm</h3>
+        <ol class="steps">
+          <li>Open John 1 in BibleGateway.</li>
+          <li>Use NIV or NLT for a first pass.</li>
+          <li>Listen to one chapter while following the words.</li>
+          <li>Replay confusing sections before adding commentary.</li>
+        </ol>
+      </div>
+    `,
+  },
+  sabbath: {
+    kicker: "Rest",
+    title: "After seven days, pause.",
+    body: `
+      <p class="drawer-intro">
+        The first week should not end with pressure to master everything. Scripture begins with a rhythm
+        of work and rest, and Jesus invites tired people to come to him.
+      </p>
+
+      <div class="drawer-section">
+        <h3>What Sabbath means here</h3>
+        <article class="drawer-resource">
+          <span class="pill">Beginner</span>
+          <h4>Stop long enough to receive</h4>
+          <p>
+            Sabbath is a biblical rhythm of stopping, resting, worshiping, and remembering that life is
+            received from God, not earned by constant effort. A beginner can start with one unhurried block
+            of time to read, pray, walk, worship, share a meal, or be still.
+          </p>
+        </article>
+      </div>
+
+      <div class="drawer-section drawer-note">
+        <h3>A simple Day 7 practice</h3>
+        <ol class="steps">
+          <li>Read or listen to John 20 again slowly.</li>
+          <li>Write one sentence: "What did I see about Jesus this week?"</li>
+          <li>Take one unhurried walk, meal, prayer, or quiet hour.</li>
+          <li>Do not add more resources until you have rested.</li>
+        </ol>
+      </div>
+
+      <div class="drawer-section">
+        <h3>Passages to hold nearby</h3>
+        <div class="resource-links">
+          <a class="link" href="https://www.biblegateway.com/passage/?search=Matthew+11%3A28-30&version=NIV" target="_blank" rel="noopener noreferrer">Matthew 11:28-30</a>
+          <a class="link" href="https://www.biblegateway.com/passage/?search=Mark+2%3A27&version=NIV" target="_blank" rel="noopener noreferrer">Mark 2:27</a>
+          <a class="link" href="https://www.biblegateway.com/passage/?search=Genesis+2%3A1-3&version=NIV" target="_blank" rel="noopener noreferrer">Genesis 2:1-3</a>
+        </div>
+      </div>
+    `,
+  },
+};
 
 function amazonSearch(query) {
   return `https://www.amazon.com/s?k=${encodeURIComponent(query)}`;
@@ -390,15 +502,30 @@ function firstDayCard(item, completedDays) {
   const id = `first-day-${item.day}`;
   const checked = completedDays.has(String(item.day)) ? "checked" : "";
   const noteMarkup = item.note ? `<p class="path-note">${escapeHtml(item.note)}</p>` : "";
+  const drawerMarkup = item.drawerTopic ? `
+    <button
+      class="icon-button path-lightbulb"
+      type="button"
+      aria-label="Open rest guidance for day ${item.day}"
+      aria-controls="guide-drawer"
+      aria-expanded="false"
+      data-drawer-open="${escapeHtml(item.drawerTopic)}"
+    >
+      ${lightbulbIcon()}
+    </button>
+  ` : "";
 
   return `
     <article class="card path-card ${checked ? "is-complete" : ""}" data-path-day="${item.day}">
       <div class="path-card-head">
         <span class="badge">${item.day}</span>
-        <label class="path-check" for="${id}">
-          <input id="${id}" type="checkbox" data-path-check="${item.day}" ${checked} />
-          <span>Done</span>
-        </label>
+        <div class="path-card-actions">
+          ${drawerMarkup}
+          <label class="path-check" for="${id}">
+            <input id="${id}" type="checkbox" data-path-check="${item.day}" ${checked} />
+            <span>Done</span>
+          </label>
+        </div>
       </div>
       <h3>Day ${item.day}: ${escapeHtml(item.reading)}</h3>
       <p>${escapeHtml(item.focus)}</p>
@@ -412,6 +539,25 @@ function firstDayCard(item, completedDays) {
         <a class="link" href="${escapeHtml(item.listenHref)}" target="_blank" rel="noopener noreferrer">Listen</a>
       </div>
     </article>
+  `;
+}
+
+function lightbulbIcon() {
+  return `
+    <svg
+      class="resource-panel-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      stroke="currentColor"
+      stroke-width="1.5"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+    </svg>
   `;
 }
 
@@ -507,20 +653,25 @@ function setupFilters() {
   });
 }
 
-function setupResourceDrawer() {
-  const drawer = document.getElementById("listening-resources-panel");
+function setupGuideDrawer() {
+  const drawer = document.getElementById("guide-drawer");
   const overlay = document.querySelector(".drawer-overlay");
-  const openButtons = [...document.querySelectorAll("[data-resource-panel-open]")];
-  const closeButtons = [...document.querySelectorAll("[data-resource-panel-close]")];
+  const kicker = document.getElementById("guide-drawer-kicker");
+  const title = document.getElementById("guide-drawer-title");
+  const body = document.getElementById("guide-drawer-body");
+  const closeButtons = [...document.querySelectorAll("[data-drawer-close]")];
+  let activeTrigger = null;
 
-  if (!drawer || !overlay || openButtons.length === 0) return;
+  if (!drawer || !overlay || !kicker || !title || !body) return;
 
   const setOpen = (isOpen) => {
     drawer.classList.toggle("is-open", isOpen);
     overlay.classList.toggle("is-open", isOpen);
     drawer.setAttribute("aria-hidden", String(!isOpen));
     drawer.inert = !isOpen;
-    openButtons.forEach((button) => button.setAttribute("aria-expanded", String(isOpen)));
+    document
+      .querySelectorAll("[data-drawer-open]")
+      .forEach((button) => button.setAttribute("aria-expanded", String(isOpen && button === activeTrigger)));
     document.body.classList.toggle("drawer-open", isOpen);
 
     if (isOpen) {
@@ -534,13 +685,31 @@ function setupResourceDrawer() {
     }, 180);
   };
 
-  openButtons.forEach((button) => button.addEventListener("click", () => setOpen(true)));
-  closeButtons.forEach((button) => button.addEventListener("click", () => setOpen(false)));
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-drawer-open]");
+    if (!trigger) return;
+
+    const topic = drawerTopics[trigger.dataset.drawerOpen];
+    if (!topic) return;
+
+    activeTrigger = trigger;
+    kicker.textContent = topic.kicker;
+    title.textContent = topic.title;
+    body.innerHTML = topic.body;
+    setOpen(true);
+  });
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setOpen(false);
+      activeTrigger?.focus();
+    });
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && drawer.classList.contains("is-open")) {
       setOpen(false);
-      openButtons[0]?.focus();
+      activeTrigger?.focus();
     }
   });
 }
@@ -558,5 +727,5 @@ if (resourceGrid) {
 
 setupTabs();
 setupFilters();
-setupResourceDrawer();
 setupFirstPath();
+setupGuideDrawer();
