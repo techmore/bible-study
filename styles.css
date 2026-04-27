@@ -358,6 +358,11 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.card-with-action {
+  position: relative;
+  padding-right: 4.35rem;
+}
+
 .card-topline .badge {
   margin-bottom: 0;
 }
@@ -390,8 +395,20 @@ h1 {
 }
 
 .icon-button svg {
+  display: block;
   width: 1.35rem;
   height: 1.35rem;
+  flex: 0 0 auto;
+}
+
+.resource-panel-trigger {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+}
+
+.resource-panel-icon {
+  color: currentColor;
 }
 
 .timeline {
