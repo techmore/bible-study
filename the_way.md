@@ -308,8 +308,8 @@ Avoid making the beginner feel they must buy something. Always offer free web al
 
 ### Phase 3: Glossary
 
-- [ ] Add a glossary data object in `app.js`.
-- [ ] Render glossary cards or a searchable glossary section.
+- [x] Add a glossary data object in `app.js`.
+- [x] Render glossary cards or a searchable glossary section.
 - [ ] Link glossary terms from lightbulb panels.
 
 ### Phase 4: Practices
