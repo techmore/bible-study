@@ -412,6 +412,7 @@ const drawerTopics = {
         John is not first because the other Gospels matter less. John is first because it gives a direct,
         concentrated introduction to who Jesus is and what belief in him means.
       </p>
+      ${glossaryLinks(["Gospel", "Faith", "Disciple"])}
 
       <div class="drawer-section">
         <h3>What John helps you see</h3>
@@ -518,6 +519,7 @@ const drawerTopics = {
         A Bible translation is not a spiritual ranking system. For a beginner, the best translation is
         one you can actually read with understanding.
       </p>
+      ${glossaryLinks(["Gospel", "Grace", "Faith"])}
 
       <div class="drawer-section">
         <h3>Simple recommendation</h3>
@@ -564,6 +566,7 @@ const drawerTopics = {
         The word Gospel means good news. In Christianity, the good news is not mainly advice or self-improvement.
         It is the announcement of what God has done through Jesus.
       </p>
+      ${glossaryLinks(["Gospel", "Messiah", "Sin", "Grace", "Faith", "Repentance"])}
 
       <div class="drawer-section">
         <h3>Plain-language shape</h3>
@@ -607,6 +610,7 @@ const drawerTopics = {
         Prayer is not a performance. For a beginner, prayer can start as honest attention to God:
         gratitude, confession, asking for help, and quiet trust.
       </p>
+      ${glossaryLinks(["Prayer", "Grace", "Disciple"])}
 
       <div class="drawer-section">
         <h3>A simple pattern</h3>
@@ -656,6 +660,7 @@ const drawerTopics = {
         The first week should not end with pressure to master everything. Scripture begins with a rhythm
         of work and rest, and Jesus invites tired people to come to him.
       </p>
+      ${glossaryLinks(["Sabbath", "Prayer", "Grace"])}
 
       <div class="drawer-section">
         <h3>What Sabbath means here</h3>
@@ -770,6 +775,28 @@ function setupGlossary() {
   search?.addEventListener("input", apply);
 }
 
+function setupGlossaryLinks() {
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("[data-glossary-term]");
+    if (!link) return;
+
+    const search = document.getElementById("glossary-search");
+    const glossary = document.getElementById("glossary");
+    const closeButton = document.querySelector("[data-drawer-close]");
+
+    closeButton?.click();
+
+    window.setTimeout(() => {
+      if (search) {
+        search.value = link.dataset.glossaryTerm || "";
+        search.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+      glossary?.scrollIntoView({ behavior: "smooth", block: "start" });
+      search?.focus();
+    }, 220);
+  });
+}
+
 function firstDayCard(item, completedDays) {
   const id = `first-day-${item.day}`;
   const checked = completedDays.has(String(item.day)) ? "checked" : "";
@@ -830,6 +857,19 @@ function lightbulbIcon() {
     >
       <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
     </svg>
+  `;
+}
+
+function glossaryLinks(terms) {
+  const links = terms
+    .map((term) => `<button class="glossary-link" type="button" data-glossary-term="${escapeHtml(term)}">${escapeHtml(term)}</button>`)
+    .join("");
+
+  return `
+    <div class="drawer-glossary-links" aria-label="Related glossary terms">
+      <span>Related words</span>
+      <div>${links}</div>
+    </div>
   `;
 }
 
@@ -1009,3 +1049,4 @@ setupFirstPath();
 setupStaticLightbulbs();
 setupGuideDrawer();
 setupGlossary();
+setupGlossaryLinks();

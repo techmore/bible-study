@@ -632,6 +632,44 @@ h1 {
   color: var(--accent);
 }
 
+.drawer-glossary-links {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+  background: rgba(68, 100, 84, 0.08);
+  border: 1px solid rgba(68, 100, 84, 0.12);
+}
+
+.drawer-glossary-links > span {
+  color: var(--accent);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+}
+
+.drawer-glossary-links > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.glossary-link {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.4rem 0.65rem;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--accent);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.glossary-link:hover {
+  background: rgba(255, 255, 255, 0.92);
+}
+
 .timeline {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
