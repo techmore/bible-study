@@ -93,7 +93,21 @@
             <p>John is the clearest first look at who Jesus is, what he said, and why his life matters.</p>
           </article>
           <article class="card">
-            <span class="badge">2</span>
+            <div class="card-topline">
+              <span class="badge">2</span>
+              <button
+                class="icon-button resource-panel-trigger"
+                type="button"
+                aria-label="Open listening resources"
+                aria-controls="listening-resources-panel"
+                aria-expanded="false"
+                data-resource-panel-open
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                </svg>
+              </button>
+            </div>
             <h3>Listen while you read</h3>
             <p>Hearing the Gospel out loud helps the story land, especially if you are new to Christian language.</p>
           </article>
@@ -366,6 +380,88 @@
     <footer class="footer">
       <p>Built for GitHub Pages. Curate, expand, and swap resources as you refine the guide.</p>
     </footer>
+
+    <div class="drawer-overlay" data-resource-panel-close hidden></div>
+    <aside
+      class="resource-drawer"
+      id="listening-resources-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="listening-resources-title"
+      aria-hidden="true"
+      inert
+    >
+      <div class="drawer-head">
+        <div>
+          <p class="eyebrow">Listening Resources</p>
+          <h2 id="listening-resources-title">Read John with audio beside you.</h2>
+        </div>
+        <button class="icon-button" type="button" aria-label="Close listening resources" data-resource-panel-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <p class="drawer-intro">
+        Start with a modern translation and a clean narrator. If one site feels awkward on your phone,
+        use the next one; the goal is steady exposure to the Gospel itself.
+      </p>
+
+      <div class="drawer-section">
+        <h3>Best first choice</h3>
+        <article class="drawer-resource">
+          <span class="pill">Beginner</span>
+          <h4>BibleGateway Audio Bibles</h4>
+          <p>
+            Best overall starting point: open John, choose NIV, NLT, or another readable translation,
+            then use the speaker icon or Audio Bibles page to listen while the text stays nearby.
+          </p>
+          <div class="resource-links">
+            <a class="link" href="https://www.biblegateway.com/passage/?search=John+1&version=NIV" target="_blank" rel="noopener noreferrer">John 1 NIV</a>
+            <a class="link" href="https://www.biblegateway.com/resources/audio/" target="_blank" rel="noopener noreferrer">Audio Bibles</a>
+            <a class="link" href="https://www.biblegateway.com/audio/devotional/story-of-jesus" target="_blank" rel="noopener noreferrer">Story of Jesus</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="drawer-section">
+        <h3>Good browser backups</h3>
+        <article class="drawer-resource">
+          <span class="pill">KJV</span>
+          <h4>AudioBible.com</h4>
+          <p>Simple chapter links with KJV text and audio together. Useful if you want word-for-word read-along in a traditional translation.</p>
+          <div class="resource-links">
+            <a class="link" href="https://audiobible.com/bible/bible.html" target="_blank" rel="noopener noreferrer">Open AudioBible</a>
+          </div>
+        </article>
+        <article class="drawer-resource">
+          <span class="pill">Languages</span>
+          <h4>WordProject</h4>
+          <p>No-frills chapter pages with text and audio, especially helpful when English is not the only language you want available.</p>
+          <div class="resource-links">
+            <a class="link" href="https://www.wordproject.org/bibles/audio/01_english/b43.htm" target="_blank" rel="noopener noreferrer">John Audio</a>
+            <a class="link" href="https://wordproject.org/bibles/audio/index.htm" target="_blank" rel="noopener noreferrer">Audio Index</a>
+          </div>
+        </article>
+        <article class="drawer-resource">
+          <span class="pill">NET</span>
+          <h4>Bible.org John Audio</h4>
+          <p>A focused Gospel of John audio page using the NET Bible ecosystem. Good as another browser-based option.</p>
+          <div class="resource-links">
+            <a class="link" href="https://bible.org/john_audio" target="_blank" rel="noopener noreferrer">John MP3 Audio</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="drawer-section drawer-note">
+        <h3>Simple rhythm</h3>
+        <ol class="steps">
+          <li>Open John 1 in BibleGateway.</li>
+          <li>Use NIV or NLT for a first pass.</li>
+          <li>Listen to one chapter while following the words.</li>
+          <li>Replay confusing sections before adding commentary.</li>
+        </ol>
+      </div>
+    </aside>
 
     <script src="./app.js"></script>
   </body>

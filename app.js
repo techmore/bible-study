@@ -375,6 +375,44 @@ function setupFilters() {
   });
 }
 
+function setupResourceDrawer() {
+  const drawer = document.getElementById("listening-resources-panel");
+  const overlay = document.querySelector(".drawer-overlay");
+  const openButtons = [...document.querySelectorAll("[data-resource-panel-open]")];
+  const closeButtons = [...document.querySelectorAll("[data-resource-panel-close]")];
+
+  if (!drawer || !overlay || openButtons.length === 0) return;
+
+  const setOpen = (isOpen) => {
+    drawer.classList.toggle("is-open", isOpen);
+    overlay.classList.toggle("is-open", isOpen);
+    drawer.setAttribute("aria-hidden", String(!isOpen));
+    drawer.inert = !isOpen;
+    openButtons.forEach((button) => button.setAttribute("aria-expanded", String(isOpen)));
+    document.body.classList.toggle("drawer-open", isOpen);
+
+    if (isOpen) {
+      overlay.hidden = false;
+      drawer.querySelector("a, button")?.focus();
+      return;
+    }
+
+    window.setTimeout(() => {
+      if (!overlay.classList.contains("is-open")) overlay.hidden = true;
+    }, 180);
+  };
+
+  openButtons.forEach((button) => button.addEventListener("click", () => setOpen(true)));
+  closeButtons.forEach((button) => button.addEventListener("click", () => setOpen(false)));
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && drawer.classList.contains("is-open")) {
+      setOpen(false);
+      openButtons[0]?.focus();
+    }
+  });
+}
+
 renderSection("overview-grid", sections.overview);
 renderSection("listen-grid", sections.listen);
 renderSection("study-grid", sections.study);
@@ -388,3 +426,4 @@ if (resourceGrid) {
 
 setupTabs();
 setupFilters();
+setupResourceDrawer();

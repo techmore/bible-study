@@ -223,7 +223,8 @@ h1 {
 
 .button:hover,
 .tab:hover,
-.chip:hover {
+.chip:hover,
+.icon-button:hover {
   transform: translateY(-1px);
 }
 
@@ -347,6 +348,50 @@ h1 {
   color: var(--brand-strong);
   font-weight: 800;
   margin-bottom: 1rem;
+}
+
+.card-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.card-topline .badge {
+  margin-bottom: 0;
+}
+
+.icon-button {
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  display: inline-grid;
+  place-items: center;
+  color: var(--brand-strong);
+  background: rgba(255, 255, 255, 0.66);
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.icon-button:hover {
+  background: rgba(143, 95, 45, 0.12);
+  box-shadow: 0 12px 24px rgba(40, 28, 18, 0.12);
+}
+
+.icon-button:focus-visible,
+.button:focus-visible,
+.tab:focus-visible,
+.chip:focus-visible,
+.link:focus-visible {
+  outline: 3px solid rgba(68, 100, 84, 0.28);
+  outline-offset: 3px;
+}
+
+.icon-button svg {
+  width: 1.35rem;
+  height: 1.35rem;
 }
 
 .timeline {
@@ -767,6 +812,117 @@ h1 {
   font-size: 0.95rem;
 }
 
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: rgba(28, 24, 20, 0.28);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.drawer-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.resource-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  width: min(32rem, calc(100vw - 1rem));
+  height: 100vh;
+  padding: 1.2rem;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at top right, rgba(143, 95, 45, 0.12), transparent 38%),
+    var(--surface-strong);
+  border-left: 1px solid var(--line);
+  box-shadow: -24px 0 70px rgba(40, 28, 18, 0.18);
+  transform: translateX(102%);
+  transition: transform 220ms ease;
+}
+
+.resource-drawer.is-open {
+  transform: translateX(0);
+}
+
+.drawer-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.drawer-head h2 {
+  font-size: clamp(1.7rem, 5vw, 2.45rem);
+  max-width: 12ch;
+}
+
+.drawer-head .icon-button {
+  flex: 0 0 auto;
+}
+
+.drawer-head .icon-button span {
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-top: -0.15rem;
+}
+
+.drawer-intro {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.drawer-section {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.15rem;
+}
+
+.drawer-section h3 {
+  font-size: 1.25rem;
+}
+
+.drawer-resource {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.drawer-resource h4 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-size: 1.18rem;
+  line-height: 1.1;
+}
+
+.drawer-resource p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.drawer-note {
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(68, 100, 84, 0.08);
+  border: 1px solid rgba(68, 100, 84, 0.12);
+}
+
+body.drawer-open {
+  overflow: hidden;
+}
+
 @media (max-width: 980px) {
   .hero,
   .timeline,
@@ -820,6 +976,11 @@ h1 {
 
   .resource-links {
     flex-direction: column;
+  }
+
+  .resource-drawer {
+    width: 100vw;
+    padding: 1rem;
   }
 }
 
