@@ -85,7 +85,7 @@ input {
   padding: 0.85rem 1.25rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   position: sticky;
   top: 0;
@@ -101,6 +101,7 @@ input {
   display: inline-flex;
   align-items: center;
   gap: 0.9rem;
+  flex: 0 0 auto;
 }
 
 .brand strong {
@@ -132,17 +133,20 @@ input {
 .topnav {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.45rem;
   flex-wrap: wrap;
   justify-content: flex-end;
+  flex: 1 1 auto;
 }
 
 .topnav a {
-  padding: 0.55rem 0.9rem;
+  padding: 0.48rem 0.7rem;
   border-radius: 999px;
   color: var(--muted);
   background: rgba(255, 255, 255, 0.42);
   border: 1px solid transparent;
+  font-size: 0.92rem;
+  white-space: nowrap;
 }
 
 .topnav a:hover {
