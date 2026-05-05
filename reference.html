@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A beginner-friendly Bible reference guide for Christian vocabulary, biblical people, places, and timeline context."
+      content="A beginner-friendly Bible reference guide for Christian vocabulary, biblical people, places, timeline context, and quizzes."
     />
     <meta name="theme-color" content="#f5efe4" />
     <title>Reference Guide | Jesus Guide</title>
@@ -15,26 +15,27 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260504-3" />
+    <link rel="stylesheet" href="./styles.css?v=20260504-5" />
   </head>
   <body>
     <div class="backdrop backdrop-a"></div>
     <div class="backdrop backdrop-b"></div>
 
     <header class="topbar">
-      <a class="brand" href="./index.html">
+      <a class="brand" href="./index.html#top">
         <span class="brand-mark">J</span>
         <span>
           <strong>Jesus Guide</strong>
-          <small>Reference guide</small>
+          <small>Start here, go deeper, listen anytime</small>
         </span>
       </a>
       <nav class="topnav" aria-label="Primary">
-        <a href="./index.html">Home</a>
-        <a href="#reference" data-reference-jump="reference">Reference</a>
-        <a href="#people" data-reference-jump="people">People</a>
-        <a href="#locations" data-reference-jump="locations">Locations + Timeline</a>
+        <a href="./index.html#start-here">Start Here</a>
+        <a href="./reference.html">Reference</a>
+        <a href="./reference.html#quizzes">Quizzes</a>
         <a href="./roadmap.html">Roadmap</a>
+        <a href="./index.html#listen">Listen</a>
+        <a href="./index.html#resources">Resources</a>
       </nav>
     </header>
 
@@ -42,10 +43,11 @@
       <section class="reference-hero">
         <div class="reference-hero-copy">
           <p class="eyebrow">Beginner reference</p>
-          <h1>A field guide for the words, people, places, and timeline around Jesus.</h1>
+          <h1>A field guide for the words, people, places, timeline, and quizzes around Jesus.</h1>
           <p class="lede">
             Keep this open while you read John, Luke, Acts, or the roadmap. Search a word, person, or
-            place when the Bible starts naming things faster than you can hold them.
+            place when the Bible starts naming things faster than you can hold them, then use quizzes
+            to check whether the story is becoming clear.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#reference-browser">Browse the guide</a>
@@ -62,7 +64,7 @@
           <article class="reference-mini">
             <span>Then ask</span>
             <strong>Who? Where? When?</strong>
-            <p>People, places, and sequence make the story much easier to follow.</p>
+            <p>People, places, sequence, and recall questions make the story easier to follow.</p>
           </article>
         </aside>
       </section>
@@ -80,12 +82,13 @@
         <div class="reference-tools">
           <label class="search">
             <span>Search reference</span>
-            <input id="reference-search" type="search" placeholder="Try: Messiah, Peter, Galilee, resurrection" />
+            <input id="reference-search" type="search" placeholder="Try: Messiah, Peter, Galilee, John 1, resurrection" />
           </label>
           <div class="tablist reference-tabs" role="tablist" aria-label="Reference views">
             <button class="tab is-active" data-reference-tab="reference" role="tab" aria-selected="true">Reference</button>
             <button class="tab" data-reference-tab="people" role="tab" aria-selected="false">People</button>
             <button class="tab" data-reference-tab="locations" role="tab" aria-selected="false">Locations + Timeline</button>
+            <button class="tab" data-reference-tab="quizzes" role="tab" aria-selected="false">Quizzes</button>
           </div>
         </div>
 
@@ -146,6 +149,6 @@
       <p>Built for GitHub Pages. Expand this guide as new questions come up during reading.</p>
     </footer>
 
-    <script src="./reference.js?v=20260504-3"></script>
+    <script src="./reference.js?v=20260504-5"></script>
   </body>
 </html>

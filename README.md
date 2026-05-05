@@ -5,8 +5,9 @@ Static GitHub Pages site for a beginner-friendly, comprehensive guide to Jesus, 
 ## Pages
 
 - `index.html` for the home hub and resource library
-- `reference.html` for terms, people, and combined location/timeline context
+- `reference.html` for terms, people, combined location/timeline context, and quizzes
 - `roadmap.html` for the dedicated mastery tree and long-form learning path
+- `quizzes.md` for quiz coverage planning, canon/chapter inventory, and source references
 
 ## Local preview
 

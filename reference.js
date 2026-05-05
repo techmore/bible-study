@@ -325,12 +325,235 @@ const referenceData = {
       tags: ["Paul", "church", "doctrine"],
     },
   ],
+  quizzes: [
+    {
+      title: "Bible Sections Foundation Quiz",
+      kicker: "Whole Bible",
+      summary: "Checks whether the major sections of the Bible are starting to make sense.",
+      detail: "Use this before going deep into individual books. It keeps Law, history, poetry, prophets, Gospels, Acts, letters, and Revelation in the right mental buckets.",
+      start: "Take this after reading the site overview and before starting the roadmap.",
+      tags: ["section", "beginner", "whole Bible"],
+      questions: [
+        {
+          prompt: "Why is the Bible not arranged as one straight timeline?",
+          answer: "It is arranged by major sections and literary groupings, such as Law, history, poetry, prophecy, Gospels, Acts, letters, and Revelation.",
+        },
+        {
+          prompt: "Which section introduces Jesus' life, teaching, death, and resurrection most directly?",
+          answer: "The four Gospels: Matthew, Mark, Luke, and John.",
+        },
+        {
+          prompt: "Why do Acts and the letters make more sense after the Gospels?",
+          answer: "Acts shows the movement after Jesus' resurrection, and the letters explain how early Christians understood and lived the gospel.",
+        },
+      ],
+    },
+    {
+      title: "Gospel of John Book Quiz",
+      kicker: "Book",
+      summary: "A whole-book check for John's main claims about Jesus.",
+      detail: "This quiz helps a beginner see John's shape: Jesus as the Word, signs, belief, conflict, cross, resurrection, and restoration.",
+      start: "Take this after finishing the first seven-day John path.",
+      tags: ["John", "Gospel", "book"],
+      questions: [
+        {
+          prompt: "What is the main question John keeps putting in front of the reader?",
+          answer: "Who is Jesus, and what does it mean to believe in him?",
+        },
+        {
+          prompt: "Why are signs important in John?",
+          answer: "They reveal who Jesus is and invite people to trust him, but they also expose misunderstanding and divided responses.",
+        },
+        {
+          prompt: "How does John move from public signs to the cross and resurrection?",
+          answer: "The signs reveal Jesus' identity, conflict grows, Jesus teaches his disciples, then his death and resurrection reveal his mission most fully.",
+        },
+      ],
+    },
+    {
+      title: "John 1 Quiz",
+      kicker: "Chapter",
+      summary: "Checks the opening claims about Jesus as the Word, light, and Son.",
+      detail: "John 1 is dense. A good quiz here should test identity, witness, and the first disciples without requiring advanced theology vocabulary.",
+      start: "Take this after reading or listening to John 1 twice.",
+      tags: ["John 1", "chapter", "identity"],
+      questions: [
+        {
+          prompt: "What title does John use for Jesus at the beginning of the chapter?",
+          answer: "John calls Jesus the Word, who was with God and was God.",
+        },
+        {
+          prompt: "What is John the Baptist's role in this chapter?",
+          answer: "He is a witness who points away from himself and toward Jesus.",
+        },
+        {
+          prompt: "What should a reader notice about the first disciples?",
+          answer: "They begin following Jesus because of testimony, invitation, and encounter.",
+        },
+      ],
+    },
+    {
+      title: "John 3 Quiz",
+      kicker: "Chapter",
+      summary: "Checks new birth, belief, light, and God's love for the world.",
+      detail: "This chapter is famous, but beginners should see the whole conversation, not only one verse.",
+      start: "Take this after reading John 3 and reviewing the terms faith, grace, and repentance.",
+      tags: ["John 3", "chapter", "new birth"],
+      questions: [
+        {
+          prompt: "Who comes to Jesus at night?",
+          answer: "Nicodemus, a Pharisee and teacher of Israel.",
+        },
+        {
+          prompt: "What does Jesus say a person needs?",
+          answer: "A person needs to be born again, or born from above.",
+        },
+        {
+          prompt: "What does John 3 connect belief with?",
+          answer: "It connects belief with receiving life through the Son God has sent.",
+        },
+      ],
+    },
+    {
+      title: "John 4 Quiz",
+      kicker: "Chapter",
+      summary: "Checks the Samaritan woman, living water, worship, and outsider welcome.",
+      detail: "John 4 is a strong chapter for learning how Jesus crosses social, ethnic, moral, and religious boundaries.",
+      start: "Take this after reading John 4 and looking up Samaria.",
+      tags: ["John 4", "chapter", "Samaria"],
+      questions: [
+        {
+          prompt: "Where does Jesus meet the woman in John 4?",
+          answer: "He meets her at a well in Samaria.",
+        },
+        {
+          prompt: "What image does Jesus use to describe what he gives?",
+          answer: "Jesus speaks of living water.",
+        },
+        {
+          prompt: "How does the woman respond after the conversation?",
+          answer: "She goes back to her town and points others toward Jesus.",
+        },
+      ],
+    },
+    {
+      title: "John 11 Quiz",
+      kicker: "Chapter",
+      summary: "Checks Lazarus, resurrection, grief, faith, and rising conflict.",
+      detail: "John 11 is both pastoral and dramatic. It reveals Jesus' love, power over death, and the growing opposition that leads toward the cross.",
+      start: "Take this after reading John 11 slowly.",
+      tags: ["John 11", "chapter", "Lazarus"],
+      questions: [
+        {
+          prompt: "Who does Jesus raise from the dead?",
+          answer: "Jesus raises Lazarus from the dead.",
+        },
+        {
+          prompt: "What does Jesus say about himself before raising Lazarus?",
+          answer: "Jesus says, 'I am the resurrection and the life.'",
+        },
+        {
+          prompt: "Why does this chapter push the story toward the cross?",
+          answer: "The raising of Lazarus intensifies belief in Jesus and also intensifies opposition from the leaders.",
+        },
+      ],
+    },
+    {
+      title: "John 18-21 Quiz",
+      kicker: "Chapters",
+      summary: "Checks the arrest, trial, cross, resurrection, and Peter's restoration.",
+      detail: "This quiz covers the climax of John and helps users connect Jesus' suffering, victory, and restoration of failed disciples.",
+      start: "Take this after Day 7 of the John path.",
+      tags: ["John 18", "John 19", "John 20", "John 21"],
+      questions: [
+        {
+          prompt: "Which Roman official questions Jesus before the crucifixion?",
+          answer: "Pontius Pilate questions Jesus.",
+        },
+        {
+          prompt: "Who first encounters the risen Jesus in John 20?",
+          answer: "Mary Magdalene encounters the risen Jesus.",
+        },
+        {
+          prompt: "What happens with Peter in John 21?",
+          answer: "Jesus restores Peter and calls him to care for his sheep.",
+        },
+      ],
+    },
+    {
+      title: "Luke and Acts Bridge Quiz",
+      kicker: "Books",
+      summary: "Checks how Luke's Gospel connects to the early church story in Acts.",
+      detail: "This quiz prepares users to move from Jesus' ministry into the Spirit-empowered witness of the early church.",
+      start: "Take this after reading Luke 24 and Acts 1-2.",
+      tags: ["Luke", "Acts", "book"],
+      questions: [
+        {
+          prompt: "Why are Luke and Acts useful to read together?",
+          answer: "Luke tells the story of Jesus, and Acts continues with the early church after the resurrection and ascension.",
+        },
+        {
+          prompt: "What major event in Acts empowers the church's witness?",
+          answer: "Pentecost, when the Holy Spirit is poured out.",
+        },
+        {
+          prompt: "What movement pattern does Acts follow?",
+          answer: "The witness moves from Jerusalem outward to wider regions and eventually toward Rome.",
+        },
+      ],
+    },
+    {
+      title: "Romans and Ephesians Doctrine Quiz",
+      kicker: "Books",
+      summary: "Checks grace, faith, church, unity, and new life in Christ.",
+      detail: "This quiz should come after the Gospels and Acts so doctrine stays connected to Jesus' story instead of floating as abstract ideas.",
+      start: "Take this after reading Romans 1-8 and Ephesians 1-4.",
+      tags: ["Romans", "Ephesians", "doctrine"],
+      questions: [
+        {
+          prompt: "Why should Romans and Ephesians usually come after the Gospels for beginners?",
+          answer: "They explain the meaning of Jesus' work, so they are clearer after users know Jesus' story.",
+        },
+        {
+          prompt: "What major theme do both books emphasize?",
+          answer: "God's grace in Christ and the new life of faith that follows.",
+        },
+        {
+          prompt: "What does Ephesians emphasize about the church?",
+          answer: "Ephesians emphasizes unity in Christ and the church as God's people shaped by grace.",
+        },
+      ],
+    },
+    {
+      title: "Locations and Timeline Quiz",
+      kicker: "Context",
+      summary: "Checks whether users can place major people and events in the story.",
+      detail: "This is the bridge between geography and chronology. It tests Jerusalem, Galilee, Samaria, Rome, public ministry, final week, resurrection, and Acts.",
+      start: "Take this after using the Locations + Timeline tab.",
+      tags: ["locations", "timeline", "context"],
+      questions: [
+        {
+          prompt: "Which city becomes the setting for Jesus' final conflict, crucifixion, and resurrection?",
+          answer: "Jerusalem.",
+        },
+        {
+          prompt: "Which region is associated with much of Jesus' public ministry?",
+          answer: "Galilee.",
+        },
+        {
+          prompt: "Why does Rome matter in the New Testament context?",
+          answer: "Rome shapes political power, roads, military force, citizenship, crucifixion, and the wider mission setting.",
+        },
+      ],
+    },
+  ],
 };
 
 const tabLabels = {
   reference: "Reference",
   people: "People",
   locations: "Locations + Timeline",
+  quizzes: "Quizzes",
 };
 
 const tabAliases = {
@@ -342,6 +565,8 @@ const tabAliases = {
 const state = {
   tab: "reference",
   query: "",
+  quizSize: "25",
+  randomQuiz: [],
 };
 
 function escapeHtml(text) {
@@ -354,16 +579,43 @@ function escapeHtml(text) {
 }
 
 function searchable(item) {
-  return [item.title, item.kicker, item.summary, item.detail, item.start, ...(item.tags || [])]
+  return [
+    item.title,
+    item.kicker,
+    item.summary,
+    item.detail,
+    item.start,
+    ...(item.tags || []),
+    ...(item.questions || []).flatMap((question) => [question.prompt, question.answer]),
+  ]
     .join(" ")
     .toLowerCase();
 }
 
 function referenceCard(item) {
   const tagMarkup = item.tags.map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("");
+  const questionMarkup = item.questions?.length
+    ? `
+      <div class="quiz-questions">
+        ${item.questions
+          .map(
+            (question, index) => `
+              <details class="quiz-question">
+                <summary>
+                  <span>Question ${index + 1}</span>
+                  <strong>${escapeHtml(question.prompt)}</strong>
+                </summary>
+                <p>${escapeHtml(question.answer)}</p>
+              </details>
+            `,
+          )
+          .join("")}
+      </div>
+    `
+    : "";
 
   return `
-    <article class="card reference-card">
+    <article class="card reference-card ${item.questions?.length ? "quiz-card" : ""}">
       <div class="reference-card-head">
         <span class="pill">${escapeHtml(item.kicker)}</span>
       </div>
@@ -376,9 +628,146 @@ function referenceCard(item) {
         <span>Start here</span>
         <p>${escapeHtml(item.start)}</p>
       </div>
+      ${questionMarkup}
       <div class="resource-meta">${tagMarkup}</div>
     </article>
   `;
+}
+
+function quizQuestionBank(items) {
+  return items.flatMap((item) =>
+    (item.questions || []).map((question) => ({
+      source: item.title,
+      scope: item.kicker,
+      prompt: question.prompt,
+      answer: question.answer,
+      tags: item.tags || [],
+    })),
+  );
+}
+
+function shuffleItems(items) {
+  return [...items]
+    .map((item) => ({ item, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ item }) => item);
+}
+
+function renderQuizToc(items) {
+  const tocItems = items
+    .map(
+      (item) => `
+        <a href="#${escapeHtml(slugify(item.title))}">
+          <span>${escapeHtml(item.kicker)}</span>
+          <strong>${escapeHtml(item.title)}</strong>
+          <small>${item.questions?.length || 0} questions</small>
+        </a>
+      `,
+    )
+    .join("");
+
+  return `
+    <section class="quiz-hub">
+      <div class="quiz-hub-head">
+        <div>
+          <p class="eyebrow">Quiz TOC</p>
+          <h3>Choose a scope, or generate a mixed practice set.</h3>
+          <p>
+            Search first to narrow this to a book, section, chapter, or context topic. Leave search blank
+            to pull from every available quiz question.
+          </p>
+        </div>
+        <a class="link" href="./quizzes.md">Quiz planning notes</a>
+      </div>
+      <div class="quiz-toc">${tocItems || "<p>No quiz sets match this search yet.</p>"}</div>
+    </section>
+  `;
+}
+
+function renderQuizGenerator(items) {
+  const bank = quizQuestionBank(items);
+  const requested = state.quizSize === "all" ? bank.length : Number(state.quizSize);
+  const availableCount = bank.length;
+  const chosenCount = state.randomQuiz.length;
+  const practiceMarkup = state.randomQuiz.length
+    ? `
+      <div class="quiz-random-list">
+        ${state.randomQuiz
+          .map(
+            (question, index) => `
+              <details class="quiz-question">
+                <summary>
+                  <span>${escapeHtml(question.source)} · ${escapeHtml(question.scope)} · ${index + 1}</span>
+                  <strong>${escapeHtml(question.prompt)}</strong>
+                </summary>
+                <p>${escapeHtml(question.answer)}</p>
+              </details>
+            `,
+          )
+          .join("")}
+      </div>
+    `
+    : `
+      <p class="quiz-empty-note">
+        Generate a set when you are ready. Answers stay hidden until each question is opened.
+      </p>
+    `;
+
+  return `
+    <section class="quiz-generator">
+      <div class="quiz-generator-controls">
+        <div>
+          <p class="eyebrow">Random practice</p>
+          <h3>${availableCount} available questions</h3>
+          <p>
+            ${chosenCount
+              ? `Showing ${chosenCount} question${chosenCount === 1 ? "" : "s"}${requested > availableCount ? " because the current bank is smaller than the requested set." : "."}`
+              : "Use this for recall practice after reading. Search can turn it into a per-book or per-chapter generator."}
+          </p>
+        </div>
+        <label class="quiz-size-control">
+          <span>Set size</span>
+          <select id="quiz-size">
+            <option value="25" ${state.quizSize === "25" ? "selected" : ""}>25</option>
+            <option value="50" ${state.quizSize === "50" ? "selected" : ""}>50</option>
+            <option value="100" ${state.quizSize === "100" ? "selected" : ""}>100</option>
+            <option value="all" ${state.quizSize === "all" ? "selected" : ""}>All</option>
+          </select>
+        </label>
+        <button class="button button-primary" type="button" data-generate-quiz ${availableCount ? "" : "disabled"}>
+          Generate
+        </button>
+      </div>
+      ${practiceMarkup}
+    </section>
+  `;
+}
+
+function renderQuizCard(item) {
+  const card = referenceCard(item);
+  return card.replace("<article", `<article id="${escapeHtml(slugify(item.title))}"`);
+}
+
+function renderQuizView(items) {
+  return `
+    ${renderQuizToc(items)}
+    ${renderQuizGenerator(items)}
+    ${items.length
+      ? items.map(renderQuizCard).join("")
+      : `
+        <article class="card reference-empty">
+          <h3>No matches yet</h3>
+          <p>Try searching for a broader book, section, chapter, or topic.</p>
+        </article>
+      `}
+  `;
+}
+
+function slugify(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 function filteredItems() {
@@ -401,7 +790,9 @@ function renderReference() {
   `;
 
   grid.innerHTML = items.length
-    ? items.map(referenceCard).join("")
+    ? state.tab === "quizzes"
+      ? renderQuizView(items)
+      : items.map(referenceCard).join("")
     : `
       <article class="card reference-empty">
         <h3>No matches yet</h3>
@@ -438,6 +829,26 @@ function setupReferenceSearch() {
 
   search.addEventListener("input", () => {
     state.query = search.value;
+    state.randomQuiz = [];
+    renderReference();
+  });
+}
+
+function setupQuizControls() {
+  document.addEventListener("change", (event) => {
+    if (event.target.id !== "quiz-size") return;
+    state.quizSize = event.target.value;
+    state.randomQuiz = [];
+    renderReference();
+  });
+
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-generate-quiz]");
+    if (!button) return;
+
+    const bank = quizQuestionBank(filteredItems());
+    const requested = state.quizSize === "all" ? bank.length : Number(state.quizSize);
+    state.randomQuiz = shuffleItems(bank).slice(0, Math.min(requested, bank.length));
     renderReference();
   });
 }
@@ -470,6 +881,7 @@ function setupReferenceHash() {
 
 setupReferenceTabs();
 setupReferenceSearch();
+setupQuizControls();
 setupReferenceJumps();
 renderReference();
 setupReferenceHash();
