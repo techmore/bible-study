@@ -7,37 +7,43 @@
       name="description"
       content="A guided, beginner-friendly Bible and Jesus resource hub with listening paths, study tools, books, courses, and historical context."
     />
-    <meta name="theme-color" content="#f5efe4" />
+    <meta name="theme-color" content="#c4c9b0" />
     <title>Jesus Guide | Bible Study Welcome Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260504-6" />
+    <link rel="stylesheet" href="./styles.css?v=20260509-1" />
   </head>
   <body>
     <div class="backdrop backdrop-a"></div>
     <div class="backdrop backdrop-b"></div>
 
     <header class="topbar">
-      <a class="brand" href="./index.html#top">
-        <span class="brand-mark">J</span>
-        <span>
-          <strong>Jesus Guide</strong>
-          <small>Start here, go deeper, listen anytime</small>
-        </span>
-      </a>
-      <nav class="topnav" aria-label="Primary">
-        <a href="./index.html#start-here">Start Here</a>
+      <div class="topbar-main">
+        <a class="brand" href="./index.html#top">
+          <span class="brand-mark">J</span>
+          <span>
+            <strong>Jesus Guide</strong>
+            <small>Start here, go deeper, listen anytime</small>
+          </span>
+        </a>
+        <nav class="topnav topnav-primary" aria-label="Primary">
+          <a href="./index.html#start-here">Start Here</a>
+          <a href="./roadmap.html">Roadmap</a>
+          <a href="./index.html#listen">Listen</a>
+          <a href="./index.html#poetry">Poetry</a>
+          <a href="./index.html#resources">Resources</a>
+        </nav>
+      </div>
+      <nav class="topnav topnav-reference" aria-label="Reference">
         <a href="./reference.html#vocabulary">Vocabulary</a>
         <a href="./reference.html#people">People</a>
         <a href="./reference.html#locations">Locations</a>
         <a href="./reference.html#timeline">Timeline</a>
-        <a href="./roadmap.html">Roadmap</a>
-        <a href="./index.html#listen">Listen</a>
-        <a href="./index.html#resources">Resources</a>
+        <a href="./reference.html#traditions">Traditions</a>
         <a href="./reference.html#quizzes">Quizzes</a>
       </nav>
     </header>
@@ -418,6 +424,42 @@
             <p>Differences usually tell you where the Greek or Hebrew is more complex than one English word can carry.</p>
           </article>
         </div>
+      </section>
+
+      <section id="poetry" class="section poetry-section">
+        <div class="section-heading section-heading-wide">
+          <p class="eyebrow">Poetry</p>
+          <h2>Read great poems as a road back to Scripture.</h2>
+          <p>
+            These works are not substitutes for the Bible. Use them as slow imaginative companions:
+            they dramatize sin, grace, judgment, longing, virtue, prayer, and hope so the biblical
+            message can become more memorable and searchable in your own mind.
+          </p>
+        </div>
+
+        <div class="split-grid poetry-lens">
+          <article class="card card-quiet">
+            <h3>How to relate them to the Bible</h3>
+            <ul class="bullets">
+              <li>Start with the Scripture passage named on the card.</li>
+              <li>Read the poem as an interpretation, not as final authority.</li>
+              <li>Ask which biblical theme the author is intensifying: fall, exile, repentance, holiness, worship, or resurrection hope.</li>
+              <li>Return to the Bible and notice what the poem made easier, harder, or more vivid.</li>
+            </ul>
+          </article>
+          <article class="card card-quiet">
+            <h3>Best reading order</h3>
+            <ol class="steps">
+              <li>Herbert or Donne for daily prayer.</li>
+              <li>Bunyan for the Christian life as a journey.</li>
+              <li>Milton and Dante for cosmic scope.</li>
+              <li>Spenser and Eliot after the biblical categories feel familiar.</li>
+              <li>Psalms, Job, Song of Songs, Ecclesiastes, and Revelation stay open beside them.</li>
+            </ol>
+          </article>
+        </div>
+
+        <div class="grid grid-3 poetry-grid" id="poetry-grid"></div>
       </section>
 
       <section id="traditions" class="section">
