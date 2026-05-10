@@ -497,6 +497,36 @@ h1 {
   background: var(--bg-elevated);
 }
 
+.bible-year-section {
+  background:
+    linear-gradient(135deg, rgba(247, 248, 244, 0.82), rgba(221, 225, 208, 0.78)),
+    var(--surface);
+  border-color: rgba(87, 93, 61, 0.36);
+}
+
+.bible-year-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.bible-year-actions {
+  margin-top: 0.35rem;
+}
+
+.bible-year-panel {
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--olive-100);
+  box-shadow: var(--shadow);
+}
+
+.bible-year-cards {
+  margin-top: 1rem;
+}
+
 .path-summary {
   display: flex;
   justify-content: space-between;
@@ -1641,6 +1671,7 @@ body.drawer-open {
   .grid-4,
   .grid-3,
   .split-grid,
+  .bible-year-layout,
   .roadmap-teaser,
   .roadmap-hero,
   .meta-grid,

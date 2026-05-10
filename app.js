@@ -317,6 +317,17 @@ const resources = [
     ],
   },
   {
+    title: "The Bible in a Year with Fr. Mike Schmitz",
+    category: "audio",
+    copy: "A 365-episode listening path through the Catholic Bible with Scripture readings, brief commentary, and prayer. Best used as a replacement habit for scrolling.",
+    tags: ["Audio", "Scripture", "Daily"],
+    links: [
+      { label: "YouTube playlist", href: "https://www.youtube.com/watch?v=JFbGuKTjlmc&list=PL0QzUlsjD3k3UnRBLz_Y3DYQGv-mQAqy0" },
+      { label: "Ascension podcast", href: "https://app.ascensionpress.com/podcasts/bible?utm_source=ascension-shopify&utm_medium=website" },
+      { label: "Reading plan PDF", href: "https://stthecla.com/wp-content/uploads/2021/09/Bible-in-a-Year-Reading-Plan.pdf" },
+    ],
+  },
+  {
     title: "BibleHub interlinear",
     category: "tool",
     copy: "A practical original-language tool for verse-by-verse comparison, Strong’s numbers, and quick lexical checking.",
