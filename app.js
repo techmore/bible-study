@@ -213,6 +213,17 @@ const poetryWorks = [
       { label: "YouTube deep dives", href: youtubeSearch("T.S. Eliot Four Quartets Christian theology lecture") },
     ],
   },
+  {
+    title: "Johann Wolfgang von Goethe - Faust",
+    frame: "Ambition, temptation, spiritual exhaustion, knowledge, and the danger of gaining the world while losing the soul.",
+    copy: "Read Faust later, as diagnosis rather than devotional grounding. It is useful for intellectually restless readers because it exposes how the hunger to master everything can become a spiritual trap that sends you back to Genesis, Job, Ecclesiastes, and Jesus' wilderness temptation.",
+    scripture: ["Genesis 3", "Job 1-2", "Matthew 4", "Matthew 16:24-26"],
+    links: [
+      { label: "Amazon editions", href: amazonSearch("Goethe Faust translation notes") },
+      { label: "Project Gutenberg", href: "https://www.gutenberg.org/ebooks/14591" },
+      { label: "YouTube deep dives", href: youtubeSearch("Goethe Faust Christian theology temptation lecture") },
+    ],
+  },
 ];
 
 const resources = [
@@ -363,7 +374,7 @@ const resources = [
     copy: "Milton, Dante, Bunyan, Herbert, Donne, Spenser, and Eliot as slow imaginative companions that push readers back toward Scripture.",
     tags: ["Book", "Poetry", "Formation"],
     links: [
-      { label: "Open poetry guide", href: "./index.html#poetry" },
+      { label: "Open poetry guide", href: "./poetry.html" },
       { label: "Amazon: Paradise Lost", href: amazonSearch("Paradise Lost John Milton annotated edition") },
       { label: "Yale Milton lectures", href: "https://oyc.yale.edu/english/engl-220" },
     ],
@@ -814,7 +825,11 @@ function resourceCard(item) {
     .join("");
 
   const linkMarkup = item.links
-    .map((link) => `<a class="link" href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`)
+    .map((link) => {
+      const isInternal = link.href.startsWith("./") || link.href.startsWith("#");
+      const target = isInternal ? "" : ` target="_blank" rel="noopener noreferrer"`;
+      return `<a class="link" href="${escapeHtml(link.href)}"${target}>${escapeHtml(link.label)}</a>`;
+    })
     .join("");
 
   return `
@@ -916,13 +931,16 @@ function setupGlossaryLinks() {
     const glossary = document.getElementById("glossary");
     const closeButton = document.querySelector("[data-drawer-close]");
 
+    if (!glossary || !search) {
+      window.location.href = "./reference.html#vocabulary";
+      return;
+    }
+
     closeButton?.click();
 
     window.setTimeout(() => {
-      if (search) {
-        search.value = link.dataset.glossaryTerm || "";
-        search.dispatchEvent(new Event("input", { bubbles: true }));
-      }
+      search.value = link.dataset.glossaryTerm || "";
+      search.dispatchEvent(new Event("input", { bubbles: true }));
       glossary?.scrollIntoView({ behavior: "smooth", block: "start" });
       search?.focus();
     }, 220);

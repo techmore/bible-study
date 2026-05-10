@@ -7,7 +7,7 @@
       name="description"
       content="A guided, beginner-friendly Bible and Jesus resource hub with listening paths, study tools, books, courses, and historical context."
     />
-    <meta name="theme-color" content="#c4c9b0" />
+    <meta name="theme-color" content="#1f2117" />
     <title>Jesus Guide | Bible Study Welcome Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260509-1" />
+    <link rel="stylesheet" href="./styles.css?v=20260510-1" />
   </head>
   <body>
     <div class="backdrop backdrop-a"></div>
@@ -32,11 +32,10 @@
         </a>
         <nav class="topnav topnav-primary" aria-label="Primary">
           <a href="./index.html#start-here">Start Here</a>
-          <a href="./roadmap.html">Roadmap</a>
-          <a href="./index.html#listen">Listen</a>
           <a href="./index.html#bible-in-a-year">Bible in a Year</a>
-          <a href="./index.html#poetry">Poetry</a>
-          <a href="./index.html#resources">Resources</a>
+          <a href="./poetry.html">Poetry</a>
+          <a href="./resources.html">Resources</a>
+          <a href="./roadmap.html">Roadmap</a>
         </nav>
       </div>
       <nav class="topnav topnav-reference" aria-label="Reference">
@@ -61,10 +60,9 @@
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#start-here">Start with the shortest path</a>
-            <a class="button button-secondary" href="#listen">Go straight to listening</a>
             <a class="button button-secondary" href="#bible-in-a-year">Stop scrolling, start listening</a>
+            <a class="button button-secondary" href="./resources.html">Browse resources</a>
             <a class="button button-secondary" href="./reference.html">Open the reference guide</a>
-            <a class="button button-secondary" href="./roadmap.html">Open the mastery roadmap</a>
           </div>
           <div class="hero-note">
             <strong>Best first steps:</strong> read John, listen to John, compare translations, then add context.
@@ -125,14 +123,14 @@
             </div>
           </div>
 
-          <aside class="bible-year-panel">
-            <span class="panel-kicker">How to use it</span>
-            <ol class="steps">
-              <li>Put the playlist or podcast where your social apps usually win.</li>
-              <li>Listen while walking, driving, cleaning, or winding down.</li>
-              <li>Keep a Bible nearby when a passage makes you want to slow down.</li>
-              <li>If you miss days, resume from the next episode instead of quitting.</li>
-            </ol>
+          <aside class="bible-year-media" aria-label="Bible in a Year YouTube playlist">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PL0QzUlsjD3k3UnRBLz_Y3DYQGv-mQAqy0"
+              title="The Bible in a Year with Fr. Mike Schmitz playlist"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </aside>
         </div>
 
@@ -145,17 +143,19 @@
             </p>
           </article>
           <article class="card card-quiet">
+            <h3>How to use it</h3>
+            <ol class="steps">
+              <li>Put the playlist or podcast where your social apps usually win.</li>
+              <li>Listen while walking, driving, cleaning, or winding down.</li>
+              <li>Keep a Bible nearby when a passage makes you want to slow down.</li>
+              <li>If you miss days, resume from the next episode instead of quitting.</li>
+            </ol>
+          </article>
+          <article class="card card-quiet">
             <h3>What to know</h3>
             <p>
               This is a Catholic reading plan using the RSV Second Catholic Edition and includes the
               deuterocanonical books, so it is especially useful for understanding Catholic Scripture practice.
-            </p>
-          </article>
-          <article class="card card-quiet">
-            <h3>Best posture</h3>
-            <p>
-              Use the audio to get moving, then return to the Bible text itself. The goal is not more
-              content; the goal is daily exposure to God’s Word.
             </p>
           </article>
         </div>
@@ -311,296 +311,42 @@
         </div>
       </section>
 
-      <section id="glossary" class="section glossary-section">
+      <section id="deeper-paths" class="section path-hub-section">
         <div class="section-heading section-heading-wide">
-          <p class="eyebrow">Words You Will Hear</p>
-          <h2>A plain-language beginner glossary.</h2>
+          <p class="eyebrow">Go Deeper</p>
+          <h2>Choose a focused room instead of scrolling forever.</h2>
           <p>
-            Christian language can feel like a wall at first. Use this as a quick decoder while
-            you read John and begin the practices.
-          </p>
-        </div>
-        <label class="search glossary-search">
-          <span>Search glossary</span>
-          <input id="glossary-search" type="search" placeholder="Try: gospel, grace, repentance, Sabbath" />
-        </label>
-        <div class="glossary-grid" id="glossary-grid"></div>
-      </section>
-
-      <section id="why-john" class="section split">
-        <div class="section-heading">
-          <p class="eyebrow">Why John?</p>
-          <h2>John is the first read, but not the first book in the Bible.</h2>
-        </div>
-        <div class="split-grid">
-          <article class="card card-quiet">
-            <h3>The Bible is ordered canonically</h3>
-            <p>
-              The Bible is not arranged as a straight timeline. It is organized by genre and by the way
-              the church received the books: Law, history, poetry, prophecy, Gospels, Acts, letters, and
-              Revelation. That is how John can be a first read even though it is not the Bible’s first book.
-            </p>
-          </article>
-          <article class="card card-quiet">
-            <h3>John is first in the learning path</h3>
-            <p>
-              John gives a clear, direct introduction to Jesus: who he is, what he claims, why he came,
-              and what belief in him means. The early church preserved it as one of the four Gospels,
-              and readers often start there because it is a strong doorway into the whole Bible.
-            </p>
-          </article>
-        </div>
-        <div class="roadmap-teaser">
-          <article class="card card-quiet">
-            <h3>Unlocked skill after John</h3>
-            <p>Once John is clear, you can unlock Luke, Mark, Matthew, and Acts with much less confusion.</p>
-          </article>
-          <article class="card card-quiet">
-            <h3>Unlock logic</h3>
-            <p>Read the one book that explains the person first, then use the others to round out the picture.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="roadmap" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Roadmap</p>
-          <h2>A long-form mastery path, split into years and skill tracks.</h2>
-        </div>
-        <div class="roadmap-teaser">
-          <article class="card card-quiet">
-            <h3>Four-year arc</h3>
-            <p>
-              Year 1: Jesus and the Gospels. Year 2: whole-Bible structure. Year 3: history, language, and context.
-              Year 4: specialization, teaching, and synthesis.
-            </p>
-          </article>
-          <article class="card card-quiet">
-            <h3>Go deeper</h3>
-            <p>
-              The dedicated roadmap page turns this into a full skill tree with daily and weekly rhythms,
-              shallow and deep dives, and tracks for mastery.
-            </p>
-            <a class="button button-primary" href="./roadmap.html">Open mastery roadmap</a>
-          </article>
-        </div>
-      </section>
-
-      <section id="explore" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Explore</p>
-          <h2>Choose how you want to learn.</h2>
-        </div>
-        <div class="tablist" role="tablist" aria-label="Learning modes">
-          <button class="tab is-active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
-          <button class="tab" data-tab="listen" role="tab" aria-selected="false">Listen</button>
-          <button class="tab" data-tab="study" role="tab" aria-selected="false">Study</button>
-          <button class="tab" data-tab="context" role="tab" aria-selected="false">Context</button>
-          <button class="tab" data-tab="library" role="tab" aria-selected="false">Library</button>
-        </div>
-
-        <div class="panels">
-          <section class="panel is-active" data-panel="overview" role="tabpanel">
-            <div class="panel-intro">
-              <h3>The beginner path</h3>
-              <p>
-                If you are brand new, use this path in order: John, Luke, Mark, Matthew, Acts, then
-                Romans and Ephesians.
-              </p>
-            </div>
-            <div class="grid grid-3" id="overview-grid"></div>
-          </section>
-
-          <section class="panel" data-panel="listen" role="tabpanel">
-            <div class="panel-intro">
-              <h3>Listen mode</h3>
-              <p>
-                This is for driving, walking, prayer, or background listening when you want to stay
-                close to Jesus without sitting down for a full study session.
-              </p>
-            </div>
-            <div class="grid grid-3" id="listen-grid"></div>
-          </section>
-
-          <section class="panel" data-panel="study" role="tabpanel">
-            <div class="panel-intro">
-              <h3>Study mode</h3>
-              <p>
-                Use these tools when you want to slow down, compare passages, and understand the text
-                more carefully.
-              </p>
-            </div>
-            <div class="grid grid-3" id="study-grid"></div>
-          </section>
-
-          <section class="panel" data-panel="context" role="tabpanel">
-            <div class="panel-intro">
-              <h3>Historical context</h3>
-              <p>
-                Learn the world of Second Temple Judaism, Rome, Greek language, Latin literature,
-                geography, and the social world behind the New Testament.
-              </p>
-            </div>
-            <div class="grid grid-3" id="context-grid"></div>
-          </section>
-
-          <section class="panel" data-panel="library" role="tabpanel">
-            <div class="panel-intro">
-              <h3>Books and courses</h3>
-              <p>
-                Good books and good courses help when you want a more structured, Khan Academy-style
-                path with repeatable lessons and deeper references.
-              </p>
-            </div>
-            <div class="grid grid-3" id="library-grid"></div>
-          </section>
-        </div>
-      </section>
-
-      <section id="translations" class="section split">
-        <div class="section-heading">
-          <p class="eyebrow">Translations</p>
-          <h2>Why compare Bible translations?</h2>
-        </div>
-        <div class="split-grid">
-          <article class="card card-quiet">
-            <h3>What comparison helps with</h3>
-            <ul class="bullets">
-              <li>Seeing where translators choose readability versus literal wording.</li>
-              <li>Spotting key terms like grace, faith, righteousness, repentance, and kingdom.</li>
-              <li>Understanding whether a passage is poetic, narrative, legal, or argumentative.</li>
-            </ul>
-          </article>
-          <article class="card card-quiet">
-            <h3>Simple rule of thumb</h3>
-            <ul class="bullets">
-              <li>Begin with a readable translation.</li>
-              <li>Check a more literal translation when a verse feels unclear.</li>
-              <li>Use an interlinear or Greek tool when you want to go all the way down.</li>
-            </ul>
-          </article>
-        </div>
-        <div class="roadmap-teaser section-spacer">
-          <article class="card card-quiet">
-            <h3>Readable</h3>
-            <p>NIV, NLT, CSB. Good for first-time readers, audio listening, and momentum.</p>
-          </article>
-          <article class="card card-quiet">
-            <h3>Middle ground</h3>
-            <p>ESV, NASB, NKJV. Good when you want a balance between clarity and precision.</p>
-          </article>
-          <article class="card card-quiet">
-            <h3>What to do with differences</h3>
-            <p>Differences usually tell you where the Greek or Hebrew is more complex than one English word can carry.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="poetry" class="section poetry-section">
-        <div class="section-heading section-heading-wide">
-          <p class="eyebrow">Poetry</p>
-          <h2>Read great poems as a road back to Scripture.</h2>
-          <p>
-            These works are not substitutes for the Bible. Use them as slow imaginative companions:
-            they dramatize sin, grace, judgment, longing, virtue, prayer, and hope so the biblical
-            message can become more memorable and searchable in your own mind.
+            The homepage now keeps the first journey clear. Use these dedicated pages when you are
+            ready for a deeper shelf, a full reference guide, or a longer mastery map.
           </p>
         </div>
 
-        <div class="split-grid poetry-lens">
-          <article class="card card-quiet">
-            <h3>How to relate them to the Bible</h3>
-            <ul class="bullets">
-              <li>Start with the Scripture passage named on the card.</li>
-              <li>Read the poem as an interpretation, not as final authority.</li>
-              <li>Ask which biblical theme the author is intensifying: fall, exile, repentance, holiness, worship, or resurrection hope.</li>
-              <li>Return to the Bible and notice what the poem made easier, harder, or more vivid.</li>
-            </ul>
+        <div class="grid grid-4 path-hub-grid">
+          <article class="card path-hub-card">
+            <span class="track-pill">Library</span>
+            <h3>Resources</h3>
+            <p>Books, courses, tools, audio, and video in a searchable library.</p>
+            <a class="link" href="./resources.html">Open resources</a>
           </article>
-          <article class="card card-quiet">
-            <h3>Best reading order</h3>
-            <ol class="steps">
-              <li>Herbert or Donne for daily prayer.</li>
-              <li>Bunyan for the Christian life as a journey.</li>
-              <li>Milton and Dante for cosmic scope.</li>
-              <li>Spenser and Eliot after the biblical categories feel familiar.</li>
-              <li>Psalms, Job, Song of Songs, Ecclesiastes, and Revelation stay open beside them.</li>
-            </ol>
+          <article class="card path-hub-card">
+            <span class="track-pill">Imagination</span>
+            <h3>Poetry</h3>
+            <p>Milton, Dante, Bunyan, Herbert, Donne, Spenser, Eliot, Faust, and Scripture anchors.</p>
+            <a class="link" href="./poetry.html">Open poetry guide</a>
           </article>
-        </div>
-
-        <div class="grid grid-3 poetry-grid" id="poetry-grid"></div>
-      </section>
-
-      <section id="traditions" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Traditions</p>
-          <h2>Different kinds of Christianity, in broad families</h2>
-        </div>
-        <div class="grid grid-3">
-          <article class="card card-quiet">
-            <h3>Catholic</h3>
-            <p>
-              Emphasizes the Bible, tradition, sacraments, the historic church, and the teaching office
-              of the church.
-            </p>
+          <article class="card path-hub-card">
+            <span class="track-pill">Reference</span>
+            <h3>Words and context</h3>
+            <p>Vocabulary, people, places, timeline, traditions, and quizzes.</p>
+            <a class="link" href="./reference.html">Open reference</a>
           </article>
-          <article class="card card-quiet">
-            <h3>Orthodox</h3>
-            <p>
-              Emphasizes ancient liturgy, the early councils, the sacraments, and a strongly historical
-              worship life.
-            </p>
-          </article>
-          <article class="card card-quiet">
-            <h3>Protestant</h3>
-            <p>
-              Emphasizes Scripture as the final authority, salvation by grace through faith, and the
-              reform movements that came after the Reformation.
-            </p>
+          <article class="card path-hub-card">
+            <span class="track-pill">Long path</span>
+            <h3>Mastery roadmap</h3>
+            <p>A multi-year map for Scripture, history, traditions, language, and teaching.</p>
+            <a class="link" href="./roadmap.html">Open roadmap</a>
           </article>
         </div>
-        <div class="split-grid" style="margin-top: 1rem;">
-          <article class="card card-quiet">
-            <h3>Within Protestantism</h3>
-            <p>
-              You will also hear about evangelical, mainline, Pentecostal, charismatic, Baptist, Reformed,
-              Anglican, and non-denominational churches. These are different expressions inside the wider
-              Protestant family.
-            </p>
-          </article>
-          <article class="card card-quiet">
-            <h3>What to compare</h3>
-            <p>
-              When you compare traditions, look at authority, sacraments, worship style, church structure,
-              and how each group explains salvation and Christian life.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="resources" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Resources</p>
-          <h2>Open library of books, videos, courses, and tools.</h2>
-        </div>
-
-        <div class="resource-toolbar">
-          <label class="search">
-            <span>Search</span>
-            <input id="resource-search" type="search" placeholder="Try: Jesus, Roman, Greek, John Mark Comer, Hillsdale" />
-          </label>
-          <div class="chips" role="toolbar" aria-label="Resource filters">
-            <button class="chip is-active" data-filter="all">All</button>
-            <button class="chip" data-filter="books">Books</button>
-            <button class="chip" data-filter="video">Video</button>
-            <button class="chip" data-filter="course">Course</button>
-            <button class="chip" data-filter="audio">Audio</button>
-            <button class="chip" data-filter="tool">Tool</button>
-          </div>
-        </div>
-
-        <div class="grid grid-3" id="resource-grid"></div>
       </section>
 
       <section class="section callout">
@@ -643,6 +389,6 @@
       <div id="guide-drawer-body"></div>
     </aside>
 
-    <script src="./app.js?v=20260504-2"></script>
+    <script src="./app.js?v=20260510-1"></script>
   </body>
 </html>
